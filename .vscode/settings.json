@@ -1,0 +1,16 @@
+{
+  "editor.tabSize": 2,
+  "editor.rulers": [100],
+  // "eslint.autoFixOnSave": true, // Has now been updated to the last setting
+  "editor.formatOnSave": false,
+  // Enable per-language
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "editor.showFoldingControls": "always",
+  "editor.folding": true,
+  "editor.foldingStrategy": "indentation",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+}
