@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { StatusBar, KeyboardAvoidingView } from 'react-native';
@@ -6,7 +6,7 @@ import { StatusBar, KeyboardAvoidingView } from 'react-native';
 import { Container } from '../components/Container';
 import { Logo } from '../components/Logo';
 import { InputWithButton } from '../components/TextInput';
-import { ClearButton } from '../components/Buttons';
+import { AddButton } from '../components/Buttons';
 import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
 import { connectAlert } from '../components/Alert';
@@ -16,18 +16,17 @@ import * as actions from '../actions/currencies';
 const HomeScreen = ({
   navigation: { navigate },
   isFetching,
-  amount,
-  conversionRate,
   baseCurrency,
-  quoteCurrency,
+  getInitialConversion,
+  quoteCurrencies,
+  rates,
   lastConvertedDate,
   primaryColor,
   alertWithType,
   currencyError,
-  getInitialConversion,
-  changeCurrencyAmount,
-  swapCurrency,
+  onRemoveQuoteCurrency,
 }) => {
+  const [amount, setAmount] = useState(100);
   useEffect(() => {
     getInitialConversion();
   }, []);
@@ -38,19 +37,17 @@ const HomeScreen = ({
     }
   }, [alertWithType, currencyError]);
 
-  const handleChangeText = text => {
-    changeCurrencyAmount(text);
-  };
   const handlePressBaseCurrency = () => {
     navigate('CurrencyList', {
       title: 'Base Currency',
       type: 'base',
     });
   };
-  const handlePressQuoteCurrency = () => {
+
+  const onAddQuoteCurrency = () => {
     navigate('CurrencyList', { title: 'Quote Currency', type: 'quote' });
   };
-  const handleSwapCurrencies = () => swapCurrency();
+
   const handleOptionsPress = () => navigate('Options');
 
   return (
@@ -64,23 +61,29 @@ const HomeScreen = ({
           onPress={handlePressBaseCurrency}
           value={amount.toString()}
           keyboardType="numeric"
-          onChangeText={handleChangeText}
+          onChangeText={text => setAmount(text)}
           textColor={primaryColor}
         />
-        <InputWithButton
-          buttonText={quoteCurrency}
-          onPress={handlePressQuoteCurrency}
-          editable={false}
-          value={isFetching ? '...' : (amount * conversionRate).toFixed(2)}
-          textColor={primaryColor}
-        />
-        <LastConverted
-          date={lastConvertedDate}
-          base={baseCurrency}
-          quote={quoteCurrency}
-          conversionRate={conversionRate}
-        />
-        <ClearButton text="Reverse Currencies" onPress={handleSwapCurrencies} />
+        {quoteCurrencies.map(quoteCurrency => (
+          <React.Fragment key={quoteCurrency}>
+            <InputWithButton
+              buttonText={quoteCurrency}
+              editable={false}
+              value={
+                isFetching ? '...' : (amount * rates[quoteCurrency]).toFixed(2)
+              }
+              textColor={primaryColor}
+              onRemove={() => onRemoveQuoteCurrency(quoteCurrency)}
+            />
+            <LastConverted
+              date={lastConvertedDate}
+              base={baseCurrency}
+              quote={quoteCurrency}
+              conversionRate={rates[quoteCurrency]}
+            />
+          </React.Fragment>
+        ))}
+        <AddButton text="Add" onPress={onAddQuoteCurrency} />
       </KeyboardAvoidingView>
     </Container>
   );
@@ -89,31 +92,26 @@ const HomeScreen = ({
 HomeScreen.propTypes = {
   navigation: PropTypes.object,
   baseCurrency: PropTypes.string,
-  quoteCurrency: PropTypes.string,
-  amount: PropTypes.number,
-  conversionRate: PropTypes.number,
   lastConvertedDate: PropTypes.object,
+  quoteCurrencies: PropTypes.array,
   isFetching: PropTypes.bool,
   primaryColor: PropTypes.string,
   currencyError: PropTypes.string,
   alertWithType: PropTypes.func,
   getInitialConversion: PropTypes.func,
-  changeCurrencyAmount: PropTypes.func,
-  swapCurrency: PropTypes.func,
+  rates: PropTypes.object,
+  onRemoveQuoteCurrency: PropTypes.func,
 };
 
 const mapStateToProps = ({ currencies, theme }) => {
-  const { baseCurrency, quoteCurrency } = currencies;
+  const { baseCurrency, quoteCurrencies } = currencies;
   const conversionSelector = currencies.conversions[baseCurrency] || {};
-  console.log('conversions', conversionSelector);
   const rates = conversionSelector.rates || {};
-  console.log('rates', rates);
 
   return {
     baseCurrency,
-    quoteCurrency,
-    amount: currencies.amount,
-    conversionRate: rates[quoteCurrency] || 0,
+    quoteCurrencies,
+    rates,
     lastConvertedDate: conversionSelector.date
       ? new Date(conversionSelector.date)
       : new Date(),
@@ -125,8 +123,8 @@ const mapStateToProps = ({ currencies, theme }) => {
 
 const mapDispatchToProps = dispatch => ({
   getInitialConversion: () => dispatch(actions.getInitialConversion()),
-  swapCurrency: () => dispatch(actions.swapCurrency()),
-  changeCurrencyAmount: text => dispatch(actions.changeCurrencyAmount(text)),
+  onRemoveQuoteCurrency: currency =>
+    dispatch(actions.onRemoveCurrency(currency)),
 });
 
 export default connect(

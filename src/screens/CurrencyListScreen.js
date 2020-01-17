@@ -15,13 +15,14 @@ const CurrencyList = ({
   primaryColor,
   changeBaseCurrency,
   changeQuoteCurrency,
+  onAddCurrency,
 }) => {
   const handlePress = currency => {
     const { type } = navigation.state.params;
     if (type === 'base') {
       changeBaseCurrency(currency);
     } else if (type === 'quote') {
-      changeQuoteCurrency(currency);
+      onAddCurrency(currency);
     }
 
     navigation.goBack(null);
@@ -69,8 +70,7 @@ const mapStateToProps = ({ currencies, theme }) => ({
 const mapDispatchToProps = dispatch => ({
   changeBaseCurrency: currency =>
     dispatch(actions.changeBaseCurrency(currency)),
-  changeQuoteCurrency: currency =>
-    dispatch(actions.changeQuoteCurrency(currency)),
+  onAddCurrency: currency => dispatch(actions.onAddCurrency(currency)),
 });
 
 export default connect(

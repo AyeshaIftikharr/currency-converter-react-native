@@ -2,8 +2,7 @@ import * as actions from '../constants/currencies';
 
 const initialState = {
   baseCurrency: 'USD',
-  quoteCurrency: 'GBP',
-  amount: 100,
+  quoteCurrencies: ['GBP'],
   conversions: {},
   error: null,
 };
@@ -27,24 +26,23 @@ const setConversions = (state, action) => {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case actions.CHANGE_CURRENCY_AMOUNT:
-      return { ...state, amount: action.amount || 0 };
-    case actions.SWAP_CURRENCY:
-      return {
-        ...state,
-        baseCurrency: state.quoteCurrency,
-        quoteCurrency: state.baseCurrency,
-      };
     case actions.CHANGE_BASE_CURRENCY:
       return {
         ...state,
         baseCurrency: action.currency,
         conversions: setConversions(state, action),
       };
-    case actions.CHANGE_QUOTE_CURRENCY:
+    case actions.ADD_QUOTE_CURRENCY:
       return {
         ...state,
-        quoteCurrency: action.currency,
+        quoteCurrencies: [...state.quoteCurrencies, action.currency],
+      };
+    case actions.REMOVE_QUOTE_CURRENCY:
+      return {
+        ...state,
+        quoteCurrencies: state.quoteCurrencies.filter(
+          quoteCurrency => quoteCurrency !== action.currency,
+        ),
       };
     case actions.GET_INITIAL_CONVERSION:
       return {

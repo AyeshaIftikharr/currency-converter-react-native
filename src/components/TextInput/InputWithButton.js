@@ -10,6 +10,7 @@ const InputWithButton = ({
   onPress,
   editable = true,
   textColor,
+  onRemove,
   ...props
 }) => {
   const underlayColor = color(styles.$buttonBackgroundColorBase).darken(
@@ -38,6 +39,14 @@ const InputWithButton = ({
         style={styles.input}
         {...props}
       />
+      {onRemove && (
+        <TouchableHighlight
+          underlayColor={underlayColor}
+          style={styles.buttonContainer}
+          onPress={onRemove}>
+          <Text style={buttonTextStyles}>-</Text>
+        </TouchableHighlight>
+      )}
     </View>
   );
 };
@@ -46,6 +55,7 @@ InputWithButton.propTypes = {
   buttonText: PropTypes.string,
   onPress: PropTypes.func,
   editable: PropTypes.bool,
+  onRemove: PropTypes.func,
 };
 
 export default InputWithButton;
