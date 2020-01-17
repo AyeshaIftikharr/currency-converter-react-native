@@ -7,49 +7,49 @@ const initialState = {
   error: null,
 };
 
-const setConversions = (state, action) => {
+const getConversionsFromStoreIfExist = (state, action) => {
   let conversion = {
     isFetching: true,
     date: '',
     rates: {},
   };
 
-  if (state.conversions[action.currency]) {
-    conversion = state.conversions[action.currency];
+  if (state.conversions[action.payload]) {
+    conversion = state.conversions[action.payload];
   }
 
   return {
     ...state.conversions,
-    [action.currency]: conversion,
+    [action.payload]: conversion,
   };
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case types.CHANGE_BASE_CURRENCY:
+    case types.CURRENCY_CHANGE_BASE:
       return {
         ...state,
-        baseCurrency: action.currency,
-        conversions: setConversions(state, action),
+        baseCurrency: action.payload,
+        conversions: getConversionsFromStoreIfExist(state, action),
       };
-    case types.ADD_QUOTE_CURRENCY:
+    case types.CURRENCY_QUOTE_CURRENCY_ADD:
       return {
         ...state,
-        quoteCurrencies: [...state.quoteCurrencies, action.currency],
+        quoteCurrencies: [...state.quoteCurrencies, action.payload],
       };
-    case types.REMOVE_QUOTE_CURRENCY:
+    case types.CURRENCY_QUOTE_CURRENCY_REMOVE:
       return {
         ...state,
         quoteCurrencies: state.quoteCurrencies.filter(
-          quoteCurrency => quoteCurrency !== action.currency,
+          quoteCurrency => quoteCurrency !== action.payload,
         ),
       };
-    case types.GET_INITIAL_CONVERSION:
+    case types.CURRENCY_GET_INITIAL_CONVERSION_RATES:
       return {
         ...state,
-        conversions: setConversions(state, { currency: state.baseCurrency }),
+        conversions: getConversionsFromStoreIfExist(state, { payload: state.baseCurrency }),
       };
-    case types.CONVERSION_RESULT:
+    case types.CURRENCY_CONVERSION_RATES_FETCH_SUCCESS:
       return {
         ...state,
         baseCurrency: action.result.base,
@@ -61,7 +61,7 @@ export default (state = initialState, action) => {
           },
         },
       };
-    case types.CONVERSION_ERROR:
+    case types.CURRENCY_CONVERSION_RATES_FETCH_FAILURE:
       return { ...state, error: action.error };
     default:
       return state;

@@ -1,13 +1,14 @@
 import { types } from '../../actions/theme';
+import { getTheme } from '../../styles/theme';
 
 const initialState = {
-  primaryColor: '#4F6D7A',
+  theme: { ...getTheme() },
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case types.CHANGE_PRIMARY_COLOR:
-      return { ...state, primaryColor: action.color };
+    case types.THEME_PRIMARY_COLOR_CHANGE:
+      return { ...state, theme: getTheme(action.payload) };
     default:
       return state;
   }

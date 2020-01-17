@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { StatusBar, KeyboardAvoidingView } from 'react-native';
 // components
-import { MainLayout } from '../ui-components/MainLayout';
-import { Logo } from '../ui-components/Logo';
-import { InputWithButton } from '../ui-components/TextInput';
-import { AddButton } from '../ui-components/Buttons';
-import { LastConverted } from '../ui-components/Text';
-import { Header } from '../ui-components/Header';
-import { connectAlert } from '../ui-components/Alert';
-
-import { actions } from '../../actions/currency';
+import { MainLayout } from '../../ui-components/MainLayout';
+import { Logo } from '../../ui-components/Logo';
+import { InputWithButton } from '../../ui-components/TextInput';
+import { AddButton } from '../../ui-components/Buttons';
+import { LastConverted } from '../../ui-components/Text';
+import { Header } from '../../ui-components/Header';
 
 const HomeScreen = ({
   navigation: { navigate },
@@ -70,9 +66,7 @@ const HomeScreen = ({
             <InputWithButton
               buttonText={quoteCurrency}
               editable={false}
-              value={
-                isFetching ? '...' : (amount * rates[quoteCurrency]).toFixed(2)
-              }
+              value={isFetching ? '...' : (amount * rates[quoteCurrency]).toFixed(2)}
               textColor={primaryColor}
               onRemove={() => onRemoveQuoteCurrency(quoteCurrency)}
             />
@@ -104,31 +98,4 @@ HomeScreen.propTypes = {
   onRemoveQuoteCurrency: PropTypes.func,
 };
 
-const mapStateToProps = ({ currency, theme }) => {
-  const { baseCurrency, quoteCurrencies } = currency;
-  const conversionSelector = currency.conversions[baseCurrency] || {};
-  const rates = conversionSelector.rates || {};
-
-  return {
-    baseCurrency,
-    quoteCurrencies,
-    rates,
-    lastConvertedDate: conversionSelector.date
-      ? new Date(conversionSelector.date)
-      : new Date(),
-    isFetching: conversionSelector.isFetching,
-    primaryColor: theme.primaryColor,
-    currencyError: currency.error,
-  };
-};
-
-const mapDispatchToProps = dispatch => ({
-  getInitialConversion: () => dispatch(actions.getInitialConversion()),
-  onRemoveQuoteCurrency: currency =>
-    dispatch(actions.onRemoveCurrency(currency)),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(connectAlert(HomeScreen));
+export default HomeScreen;

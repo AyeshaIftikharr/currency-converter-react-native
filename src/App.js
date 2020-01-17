@@ -1,29 +1,19 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import EStyleSheet from 'react-native-extended-stylesheet';
 import Navigator from './routes';
-import { AlertProvider } from './screens/ui-components/Alert';
-import store from './store';
-
-EStyleSheet.build({
-  $primaryBlue: '#4F6D7A',
-  $primaryOrange: '#D57A66',
-  $primaryGreen: '#00BD9D',
-  $primaryPurple: '#9E768F',
-
-  $white: '#FFFFFF',
-  $border: '#E2E2E2',
-  $inputText: '#797979',
-  $lightGrey: '#F0F0F0',
-  $darkText: '#343434',
-  // outline: 1, didnt work find an alternative to this
-});
+// import ThemeProvider from './styles/themeProvider';
+import { ThemeProvider } from 'styled-components';
+import { AlertProvider } from './ui-components/Alert';
+import STORE from './store';
+import { BLUE_THEME } from './styles/theme';
 
 const App = () => (
-  <Provider store={store}>
-    <AlertProvider>
-      <Navigator onNavigationStateChange={null} />
-    </AlertProvider>
+  <Provider store={STORE}>
+    <ThemeProvider theme={BLUE_THEME}>
+      <AlertProvider>
+        <Navigator onNavigationStateChange={null} />
+      </AlertProvider>
+    </ThemeProvider>
   </Provider>
 );
 

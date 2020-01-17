@@ -3,7 +3,9 @@ import { combineReducers } from 'redux';
 import currency from './currency';
 import theme from './theme';
 
-export default combineReducers({
+const rootReducer = combineReducers({
   currency,
   theme,
 });
+
+export default rootReducer;

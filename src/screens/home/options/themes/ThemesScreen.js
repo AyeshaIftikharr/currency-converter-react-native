@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { ScrollView, StatusBar } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 // components
-import { ListItem, Separator } from '../ui-components/List';
-// actions
-import { actions } from '../../actions/theme';
+import { ListItem, Separator } from '../../../../ui-components/List';
 
 const styles = EStyleSheet.create({
   $blue: '$primaryBlue',
@@ -65,12 +62,4 @@ ThemesScreen.propTypes = {
   changeTheme: PropTypes.func,
 };
 
-const mapStateToProps = () => ({});
-const mapDispatchToProps = dispatch => ({
-  changeTheme: color => dispatch(actions.changePrimaryColor(color)),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(ThemesScreen);
+export default ThemesScreen;

@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { FlatList, StatusBar, View } from 'react-native';
+import { FlatList, StatusBar } from 'react-native';
 
-import { ListItem, Separator } from '../ui-components/List';
-import CURRENCIES from '../../static/data/currencyList';
+import { View } from './styled';
+import { ListItem, Separator } from '../../../ui-components/List';
+import CURRENCIES from '../../../static/data/currencyList';
 
-import { actions } from '../../actions/currency';
-
-const CurrencyList = ({
+const CurrencyListScreen = ({
   navigation,
   baseCurrency,
   primaryColor,
@@ -26,16 +24,14 @@ const CurrencyList = ({
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    <View>
       <StatusBar translucent={false} barStyle="light-content" />
       <FlatList
         data={CURRENCIES}
         renderItem={({ item }) => (
           <ListItem
             text={item}
-            selected={
-              item === baseCurrency && navigation.state.params.type !== 'quote'
-            }
+            selected={item === baseCurrency && navigation.state.params.type !== 'quote'}
             onPress={() => handlePress(item)}
             iconBackground={primaryColor}
           />
@@ -47,7 +43,7 @@ const CurrencyList = ({
   );
 };
 
-CurrencyList.propTypes = {
+CurrencyListScreen.propTypes = {
   navigation: PropTypes.object,
   baseCurrency: PropTypes.string,
   primaryColor: PropTypes.string,
@@ -55,18 +51,4 @@ CurrencyList.propTypes = {
   changeBaseCurrency: PropTypes.func,
 };
 
-const mapStateToProps = ({ currency, theme }) => ({
-  baseCurrency: currency.baseCurrency,
-  primaryColor: theme.primaryColor,
-});
-
-const mapDispatchToProps = dispatch => ({
-  changeBaseCurrency: currency =>
-    dispatch(actions.changeBaseCurrency(currency)),
-  onAddCurrency: currency => dispatch(actions.onAddCurrency(currency)),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(CurrencyList);
+export default CurrencyListScreen;

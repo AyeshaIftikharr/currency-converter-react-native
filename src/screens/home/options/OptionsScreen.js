@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, StatusBar, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { ListItem, Separator } from '../ui-components/List';
-import { connectAlert } from '../ui-components/Alert';
+import { ListItem, Separator } from '../../../ui-components/List';
+import { connectAlert } from '../../../ui-components/Alert';
 
 const ICON_COLOR = '#868686';
 const ICON_SIZE = 20;
@@ -23,9 +23,7 @@ const OptionsScreen = ({ navigation, alertWithType }) => {
       <ListItem
         text="Themes"
         onPress={handlePressThemes}
-        customIcon={
-          <Icon name="chevron-right" size={ICON_SIZE} color={ICON_COLOR} />
-        }
+        customIcon={<Icon name="chevron-right" size={ICON_SIZE} color={ICON_COLOR} />}
       />
       <Separator />
       <ListItem

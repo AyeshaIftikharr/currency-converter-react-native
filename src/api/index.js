@@ -1,1 +1,1 @@
-export * from './currencyRatesAPI';
+export * from './currency';
