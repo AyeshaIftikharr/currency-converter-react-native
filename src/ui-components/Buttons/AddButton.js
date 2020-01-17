@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, TouchableOpacity, Text } from 'react-native';
-import styles from './styles';
+import { View, TouchableOpacity, Text } from './styled';
 
 const AddButton = ({ text, onPress }) => (
-  <TouchableOpacity style={styles.container} onPress={onPress}>
-    <View style={styles.wrapper}>
-      <Text style={styles.text}>{text}</Text>
+  <TouchableOpacity onPress={onPress}>
+    <View>
+      <Text>{text}</Text>
     </View>
   </TouchableOpacity>
 );

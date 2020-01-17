@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, TouchableHighlight, TextInput } from 'react-native';
+import { View, Text, TouchableHighlight, TextInput, Separator } from './styled';
 // styles
-import color from 'color';
-import styles from './styles';
+// import color from 'color';
 
 const InputWithButton = ({
   buttonText,
@@ -13,38 +12,19 @@ const InputWithButton = ({
   onRemove,
   ...props
 }) => {
-  const underlayColor = color(styles.$buttonBackgroundColorBase).darken(
-    styles.$buttonBackgroundColorModifier,
-  );
-  const buttonTextStyles = [styles.buttonText];
-  if (textColor) {
-    buttonTextStyles.push({ color: textColor });
-  }
+  // const underlayColor = color(styles.$buttonBackgroundColorBase).darken(
+  //   styles.$buttonBackgroundColorModifier,
+  // );
   return (
-    <View
-      style={
-        !editable
-          ? { ...styles.container, ...styles.containerDisabled }
-          : styles.container
-      }>
-      <TouchableHighlight
-        underlayColor={underlayColor}
-        style={styles.buttonContainer}
-        onPress={onPress}>
-        <Text style={buttonTextStyles}>{buttonText}</Text>
+    <View editable={editable}>
+      <TouchableHighlight onPress={onPress}>
+        <Text>{buttonText}</Text>
       </TouchableHighlight>
-      <View style={styles.border} />
-      <TextInput
-        underlineColorAndroid="transparent"
-        style={styles.input}
-        {...props}
-      />
+      <Separator />
+      <TextInput underlineColorAndroid="transparent" {...props} />
       {onRemove && (
-        <TouchableHighlight
-          underlayColor={underlayColor}
-          style={styles.buttonContainer}
-          onPress={onRemove}>
-          <Text style={buttonTextStyles}>-</Text>
+        <TouchableHighlight onPress={onRemove}>
+          <Text>-</Text>
         </TouchableHighlight>
       )}
     </View>

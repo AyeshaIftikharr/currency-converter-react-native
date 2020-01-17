@@ -1,5 +1,5 @@
 import ClearButton from './ClearButton';
 import AddButton from './AddButton';
-import styles from './styles';
+import styled from './styled';
 
-export { AddButton, ClearButton, styles };
+export { AddButton, ClearButton, styled };

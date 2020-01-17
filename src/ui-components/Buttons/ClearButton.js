@@ -1,17 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, TouchableOpacity, Text, Image } from 'react-native';
-import styles from './styles';
+import { View, TouchableOpacity, Text, Image } from './styled';
 
 const ClearButton = ({ text, onPress }) => (
-  <TouchableOpacity style={styles.container} onPress={onPress}>
-    <View style={styles.wrapper}>
-      <Image
-        resizeMode="contain"
-        style={styles.icon}
-        source={require('./images/icon.png')}
-      />
-      <Text style={styles.text}>{text}</Text>
+  <TouchableOpacity onPress={onPress}>
+    <View>
+      <Image resizeMode="contain" source={require('./images/icon.png')} />
+      <Text>{text}</Text>
     </View>
   </TouchableOpacity>
 );

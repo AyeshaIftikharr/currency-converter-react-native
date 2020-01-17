@@ -1,4 +1,4 @@
 import MainLayout from './MainLayout';
-import styles from './styles';
+import styled from './styled';
 
-export { MainLayout, styles };
+export { MainLayout, styled };

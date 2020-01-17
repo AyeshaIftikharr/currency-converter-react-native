@@ -1,6 +1,6 @@
 import ListItem from './ListItem';
-import styles from './styles';
+import styled from './styled';
 import Separator from './Separator';
 import Icon from './Icon';
 
-export { ListItem, styles, Separator, Icon };
+export { ListItem, styled, Separator, Icon };

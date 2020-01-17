@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { View, Text, TouchableHighlight } from 'react-native';
+import { TouchableHighlight } from 'react-native';
 
-import styles from './styles';
+import { View, Text } from './styled';
 import Icon from './Icon';
 
 const ListItem = ({
@@ -15,15 +15,11 @@ const ListItem = ({
   iconBackground,
 }) => {
   return (
-    <TouchableHighlight onPress={onPress} underlayColor={styles.$underlayColor}>
-      <View style={styles.row}>
-        <Text style={styles.text}>{text}</Text>
+    <TouchableHighlight onPress={onPress}>
+      <View>
+        <Text>{text}</Text>
         {selected ? (
-          <Icon
-            visible={visible}
-            checkmark={checkmark}
-            iconBackground={iconBackground}
-          />
+          <Icon visible={visible} checkmark={checkmark} iconBackground={iconBackground} />
         ) : (
             <Icon />
           )}
