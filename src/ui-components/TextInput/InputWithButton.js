@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, TouchableHighlight, TextInput, Separator } from './styled';
-// styles
-// import color from 'color';
+import { UNDERLAY_COLOR } from '../../styles/theme';
 
 const InputWithButton = ({
   buttonText,
@@ -12,18 +11,15 @@ const InputWithButton = ({
   onRemove,
   ...props
 }) => {
-  // const underlayColor = color(styles.$buttonBackgroundColorBase).darken(
-  //   styles.$buttonBackgroundColorModifier,
-  // );
   return (
     <View editable={editable}>
-      <TouchableHighlight onPress={onPress}>
+      <TouchableHighlight onPress={onPress} underlayColor={UNDERLAY_COLOR}>
         <Text>{buttonText}</Text>
       </TouchableHighlight>
       <Separator />
       <TextInput underlineColorAndroid="transparent" {...props} />
       {onRemove && (
-        <TouchableHighlight onPress={onRemove}>
+        <TouchableHighlight onPress={onRemove} underlayColor={UNDERLAY_COLOR}>
           <Text>-</Text>
         </TouchableHighlight>
       )}

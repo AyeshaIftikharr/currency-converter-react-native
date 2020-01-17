@@ -17,7 +17,6 @@ const HomeScreen = ({
   quoteCurrencies,
   rates,
   lastConvertedDate,
-  primaryColor,
   alertWithType,
   currencyError,
   onRemoveQuoteCurrency,
@@ -52,7 +51,7 @@ const HomeScreen = ({
       <StatusBar translucent={false} barStyle="light-content" />
       <Header onPress={handleOptionsPress} />
       <KeyboardAvoidingView behavior="padding">
-        <Logo tintColor={primaryColor} />
+        <Logo />
         <InputWithButton
           buttonText={baseCurrency}
           onPress={handlePressBaseCurrency}
@@ -83,16 +82,15 @@ const HomeScreen = ({
 };
 
 HomeScreen.propTypes = {
-  navigation: PropTypes.object,
-  baseCurrency: PropTypes.string,
-  lastConvertedDate: PropTypes.object,
-  quoteCurrencies: PropTypes.array,
   isFetching: PropTypes.bool,
-  primaryColor: PropTypes.string,
+  baseCurrency: PropTypes.string,
   currencyError: PropTypes.string,
+  quoteCurrencies: PropTypes.array,
+  navigation: PropTypes.object,
+  lastConvertedDate: PropTypes.object,
+  rates: PropTypes.object,
   alertWithType: PropTypes.func,
   getInitialConversion: PropTypes.func,
-  rates: PropTypes.object,
   onRemoveQuoteCurrency: PropTypes.func,
 };
 

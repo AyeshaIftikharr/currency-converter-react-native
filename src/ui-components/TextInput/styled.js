@@ -10,7 +10,7 @@ const INPUT_HEIGHT = 48;
 const BORDER_RADIUS = 4;
 
 export const View = styled(NativeView)`
-  background-color: ${({ theme, editable }) => (editable ? theme.lightGrey : theme.white)};
+  background-color: ${({ theme, editable }) => (!editable ? theme.lightGrey : theme.white)};
   width: 90%;
   height: ${INPUT_HEIGHT}px;
   border-radius: ${BORDER_RADIUS}px;

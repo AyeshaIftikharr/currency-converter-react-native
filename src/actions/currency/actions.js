@@ -5,7 +5,7 @@ export const getInitialConversion = () =>
 
 export const changeBaseCurrency = currency =>
   payloadActionCreator({
-    type: actions.CURRENCY_GET_INITIAL_CONVERSION_RATES,
+    type: actions.CURRENCY_CHANGE_BASE,
     payload: currency,
   });
 

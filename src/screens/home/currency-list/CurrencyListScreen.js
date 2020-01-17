@@ -6,13 +6,7 @@ import { View } from './styled';
 import { ListItem, Separator } from '../../../ui-components/List';
 import CURRENCIES from '../../../static/data/currencyList';
 
-const CurrencyListScreen = ({
-  navigation,
-  baseCurrency,
-  primaryColor,
-  changeBaseCurrency,
-  onAddCurrency,
-}) => {
+const CurrencyListScreen = ({ navigation, baseCurrency, changeBaseCurrency, onAddCurrency }) => {
   const handlePress = currency => {
     const { type } = navigation.state.params;
     if (type === 'base') {
@@ -33,7 +27,6 @@ const CurrencyListScreen = ({
             text={item}
             selected={item === baseCurrency && navigation.state.params.type !== 'quote'}
             onPress={() => handlePress(item)}
-            iconBackground={primaryColor}
           />
         )}
         keyExtractor={item => item}
@@ -44,9 +37,8 @@ const CurrencyListScreen = ({
 };
 
 CurrencyListScreen.propTypes = {
-  navigation: PropTypes.object,
   baseCurrency: PropTypes.string,
-  primaryColor: PropTypes.string,
+  navigation: PropTypes.object,
   onAddCurrency: PropTypes.func,
   changeBaseCurrency: PropTypes.func,
 };

@@ -2,9 +2,8 @@ import { connect } from 'react-redux';
 import CurrencyListScreen from './CurrencyListScreen';
 import { actions } from '../../../actions/currency';
 
-const mapStateToProps = ({ currency, theme }) => ({
+const mapStateToProps = ({ currency }) => ({
   baseCurrency: currency.baseCurrency,
-  primaryColor: theme.primaryColor,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -1,5 +1,5 @@
 import { types } from '../../actions/theme';
-import { getTheme } from '../../styles/theme';
+import { getTheme } from '../../utils';
 
 const initialState = {
   theme: { ...getTheme() },
