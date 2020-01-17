@@ -1,5 +1,5 @@
 import { THEME_TYPES } from '../constants';
-import THEME, { BLUE, GREEN, ORANGE, PURPLE } from '../styles/theme';
+import THEME, { BLUE, GREEN, ORANGE, PURPLE } from '../styles/Theme';
 
 export const getTheme = color => {
   const defaultTheme = {

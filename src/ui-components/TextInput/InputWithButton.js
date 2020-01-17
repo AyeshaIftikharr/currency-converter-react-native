@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, TouchableHighlight, TextInput, Separator } from './styled';
-import { UNDERLAY_COLOR } from '../../styles/theme';
+import { UNDERLAY_COLOR } from '../../styles/Theme';
 
 const InputWithButton = ({
   buttonText,
