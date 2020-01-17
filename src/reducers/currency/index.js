@@ -1,4 +1,4 @@
-import * as actions from '../constants/currencies';
+import { types } from '../../actions/currency';
 
 const initialState = {
   baseCurrency: 'USD',
@@ -26,30 +26,30 @@ const setConversions = (state, action) => {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case actions.CHANGE_BASE_CURRENCY:
+    case types.CHANGE_BASE_CURRENCY:
       return {
         ...state,
         baseCurrency: action.currency,
         conversions: setConversions(state, action),
       };
-    case actions.ADD_QUOTE_CURRENCY:
+    case types.ADD_QUOTE_CURRENCY:
       return {
         ...state,
         quoteCurrencies: [...state.quoteCurrencies, action.currency],
       };
-    case actions.REMOVE_QUOTE_CURRENCY:
+    case types.REMOVE_QUOTE_CURRENCY:
       return {
         ...state,
         quoteCurrencies: state.quoteCurrencies.filter(
           quoteCurrency => quoteCurrency !== action.currency,
         ),
       };
-    case actions.GET_INITIAL_CONVERSION:
+    case types.GET_INITIAL_CONVERSION:
       return {
         ...state,
         conversions: setConversions(state, { currency: state.baseCurrency }),
       };
-    case actions.CONVERSION_RESULT:
+    case types.CONVERSION_RESULT:
       return {
         ...state,
         baseCurrency: action.result.base,
@@ -61,7 +61,7 @@ export default (state = initialState, action) => {
           },
         },
       };
-    case actions.CONVERSION_ERROR:
+    case types.CONVERSION_ERROR:
       return { ...state, error: action.error };
     default:
       return state;

@@ -1,4 +1,4 @@
-import * as actions from '../constants/currencies';
+import * as actions from './types';
 
 export const getInitialConversion = () => ({
   type: actions.GET_INITIAL_CONVERSION,

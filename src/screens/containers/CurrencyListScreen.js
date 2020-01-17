@@ -3,15 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FlatList, StatusBar, View } from 'react-native';
 
-import { ListItem, Separator } from '../components/List';
-import CURRENCIES from '../data/currencies';
+import { ListItem, Separator } from '../ui-components/List';
+import CURRENCIES from '../../static/data/currencyList';
 
-import * as actions from '../actions/currencies';
+import { actions } from '../../actions/currency';
 
 const CurrencyList = ({
   navigation,
   baseCurrency,
-  quoteCurrency,
   primaryColor,
   changeBaseCurrency,
   onAddCurrency,
@@ -23,7 +22,6 @@ const CurrencyList = ({
     } else if (type === 'quote') {
       onAddCurrency(currency);
     }
-
     navigation.goBack(null);
   };
 
@@ -52,15 +50,13 @@ const CurrencyList = ({
 CurrencyList.propTypes = {
   navigation: PropTypes.object,
   baseCurrency: PropTypes.string,
-  quoteCurrency: PropTypes.string,
   primaryColor: PropTypes.string,
   onAddCurrency: PropTypes.func,
   changeBaseCurrency: PropTypes.func,
 };
 
-const mapStateToProps = ({ currencies, theme }) => ({
-  baseCurrency: currencies.baseCurrency,
-  quoteCurrency: currencies.quoteCurrency,
+const mapStateToProps = ({ currency, theme }) => ({
+  baseCurrency: currency.baseCurrency,
   primaryColor: theme.primaryColor,
 });
 

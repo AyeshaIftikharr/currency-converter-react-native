@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { StatusBar, KeyboardAvoidingView } from 'react-native';
 // components
-import { Container } from '../components/Container';
-import { Logo } from '../components/Logo';
-import { InputWithButton } from '../components/TextInput';
-import { AddButton } from '../components/Buttons';
-import { LastConverted } from '../components/Text';
-import { Header } from '../components/Header';
-import { connectAlert } from '../components/Alert';
+import { MainLayout } from '../ui-components/MainLayout';
+import { Logo } from '../ui-components/Logo';
+import { InputWithButton } from '../ui-components/TextInput';
+import { AddButton } from '../ui-components/Buttons';
+import { LastConverted } from '../ui-components/Text';
+import { Header } from '../ui-components/Header';
+import { connectAlert } from '../ui-components/Alert';
 
-import * as actions from '../actions/currencies';
+import { actions } from '../../actions/currency';
 
 const HomeScreen = ({
   navigation: { navigate },
@@ -52,7 +52,7 @@ const HomeScreen = ({
   const handleOptionsPress = () => navigate('Options');
 
   return (
-    <Container backgroundColor={primaryColor}>
+    <MainLayout backgroundColor={primaryColor}>
       <StatusBar translucent={false} barStyle="light-content" />
       <Header onPress={handleOptionsPress} />
       <KeyboardAvoidingView behavior="padding">
@@ -86,7 +86,7 @@ const HomeScreen = ({
         ))}
         <AddButton text="Add" onPress={onAddQuoteCurrency} />
       </KeyboardAvoidingView>
-    </Container>
+    </MainLayout>
   );
 };
 
@@ -104,9 +104,9 @@ HomeScreen.propTypes = {
   onRemoveQuoteCurrency: PropTypes.func,
 };
 
-const mapStateToProps = ({ currencies, theme }) => {
-  const { baseCurrency, quoteCurrencies } = currencies;
-  const conversionSelector = currencies.conversions[baseCurrency] || {};
+const mapStateToProps = ({ currency, theme }) => {
+  const { baseCurrency, quoteCurrencies } = currency;
+  const conversionSelector = currency.conversions[baseCurrency] || {};
   const rates = conversionSelector.rates || {};
 
   return {
@@ -118,7 +118,7 @@ const mapStateToProps = ({ currencies, theme }) => {
       : new Date(),
     isFetching: conversionSelector.isFetching,
     primaryColor: theme.primaryColor,
-    currencyError: currencies.error,
+    currencyError: currency.error,
   };
 };
 

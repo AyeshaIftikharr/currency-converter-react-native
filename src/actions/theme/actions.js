@@ -1,4 +1,4 @@
-import { CHANGE_PRIMARY_COLOR } from '../constants';
+import { CHANGE_PRIMARY_COLOR } from './types';
 
 export const changePrimaryColor = color => ({
   type: CHANGE_PRIMARY_COLOR,

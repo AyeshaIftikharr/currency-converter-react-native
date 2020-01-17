@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ScrollView, StatusBar, Platform, Linking } from 'react-native';
+import { ScrollView, StatusBar, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { ListItem, Separator } from '../components/List';
-import { connectAlert } from '../components/Alert';
+import { ListItem, Separator } from '../ui-components/List';
+import { connectAlert } from '../ui-components/Alert';
 
-const ICON_PREFIX = Platform.OS === 'ios' ? 'ios' : 'md';
 const ICON_COLOR = '#868686';
 const ICON_SIZE = 20;
 
@@ -25,26 +24,14 @@ const OptionsScreen = ({ navigation, alertWithType }) => {
         text="Themes"
         onPress={handlePressThemes}
         customIcon={
-          <Icon
-            // name={`${ICON_PREFIX}-right`}
-            name="chevron-right"
-            size={ICON_SIZE}
-            color={ICON_COLOR}
-          />
+          <Icon name="chevron-right" size={ICON_SIZE} color={ICON_COLOR} />
         }
       />
       <Separator />
       <ListItem
         text="Fixer.io"
         onPress={handlePressSite}
-        customIcon={
-          <Icon
-            // name={`${ICON_PREFIX}-link`}
-            name="link"
-            size={ICON_SIZE}
-            color={ICON_COLOR}
-          />
-        }
+        customIcon={<Icon name="link" size={ICON_SIZE} color={ICON_COLOR} />}
       />
       <Separator />
     </ScrollView>

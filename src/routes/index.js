@@ -1,10 +1,10 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { StatusBar } from 'react-native';
-import HomeScreen from '../screens/HomeScreen';
-import CurrencyListScreen from '../screens/CurrencyListScreen';
-import OptionsScreen from '../screens/OptionsScreen';
-import ThemesScreen from '../screens/ThemesScreen';
+import HomeScreen from '../screens/containers/HomeScreen';
+import CurrencyListScreen from '../screens/containers/CurrencyListScreen';
+import OptionsScreen from '../screens/containers/OptionsScreen';
+import ThemesScreen from '../screens/containers/ThemesScreen';
 
 const HomeStack = createStackNavigator(
   {
