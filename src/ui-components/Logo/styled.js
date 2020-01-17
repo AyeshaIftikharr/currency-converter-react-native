@@ -1,4 +1,3 @@
-import EStyleSheet from 'react-native-extended-stylesheet';
 import styled from 'styled-components';
 import {
   View as NativeView,
@@ -9,39 +8,6 @@ import {
 } from 'react-native';
 
 const imageWidth = Dimensions.get('window').width / 2;
-
-export default EStyleSheet.create({
-  $smallContainerSize: imageWidth / 2,
-  $smallImageSize: imageWidth / 4,
-  $largeContainerSize: imageWidth,
-  $largeImageSize: imageWidth / 2,
-  container: {
-    alignItems: 'center',
-  },
-  containerImage: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '$largeContainerSize',
-    height: '$largeContainerSize',
-  },
-  backgroundImage: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'stretch',
-    flex: 1,
-  },
-  image: {
-    width: '$largeImageSize',
-    tintColor: '$primaryBlue',
-  },
-  text: {
-    fontWeight: '600',
-    fontSize: 28,
-    letterSpacing: -0.5,
-    marginTop: 15,
-    color: '$white',
-  },
-});
 
 export const View = styled(NativeView)`
   align-items: center;
@@ -56,6 +22,7 @@ export const ImageBackground = styled(NativeBImage)`
 
 export const Image = styled(NativeImage)`
   width: ${imageWidth / 2}px;
+  tint-color: ${({ theme }) => theme.primaryColor};
 `;
 
 export const Text = styled(NativeText)`

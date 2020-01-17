@@ -52,10 +52,6 @@ const Navigator = createStackNavigator(
     },
   },
   {
-    // headerVisible: false,
-    // defaultNavigationOptions: {
-    //   headerShown: false,
-    // },
     mode: 'modal',
     headerMode: 'none',
     defaultNavigationOptions: {
