@@ -14,7 +14,6 @@ const CurrencyList = ({
   quoteCurrency,
   primaryColor,
   changeBaseCurrency,
-  changeQuoteCurrency,
   onAddCurrency,
 }) => {
   const handlePress = currency => {
@@ -28,11 +27,7 @@ const CurrencyList = ({
     navigation.goBack(null);
   };
 
-  const comparisonCurrency =
-    navigation.state.params.type === 'quote' ? quoteCurrency : baseCurrency;
-
   return (
-    // TODO: Inline syles  --> not a good practice
     <View style={{ flex: 1 }}>
       <StatusBar translucent={false} barStyle="light-content" />
       <FlatList
@@ -40,7 +35,9 @@ const CurrencyList = ({
         renderItem={({ item }) => (
           <ListItem
             text={item}
-            selected={item === comparisonCurrency}
+            selected={
+              item === baseCurrency && navigation.state.params.type !== 'quote'
+            }
             onPress={() => handlePress(item)}
             iconBackground={primaryColor}
           />
@@ -57,7 +54,7 @@ CurrencyList.propTypes = {
   baseCurrency: PropTypes.string,
   quoteCurrency: PropTypes.string,
   primaryColor: PropTypes.string,
-  changeQuoteCurrency: PropTypes.func,
+  onAddCurrency: PropTypes.func,
   changeBaseCurrency: PropTypes.func,
 };
 
