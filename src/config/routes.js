@@ -58,7 +58,6 @@ const Navigator = createStackNavigator(
     // },
     mode: 'modal',
     headerMode: 'none',
-    // cardStyle has been moved to navigationOptions Read on it
     defaultNavigationOptions: {
       cardStyle: { paddingTop: StatusBar.currentHeight },
     },

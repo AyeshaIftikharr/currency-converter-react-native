@@ -11,6 +11,6 @@
   "editor.folding": true,
   "editor.foldingStrategy": "indentation",
   "editor.codeActionsOnSave": {
-    // "source.fixAll.eslint": true
+    "source.fixAll.eslint": true
   },
 }

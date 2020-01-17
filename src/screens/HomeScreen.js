@@ -29,6 +29,7 @@ const HomeScreen = ({
   const [amount, setAmount] = useState(100);
   useEffect(() => {
     getInitialConversion();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
