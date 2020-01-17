@@ -48,7 +48,7 @@ const HomeScreen = ({
   const handleOptionsPress = () => navigate('Options');
 
   return (
-    <MainLayout backgroundColor={primaryColor}>
+    <MainLayout>
       <StatusBar translucent={false} barStyle="light-content" />
       <Header onPress={handleOptionsPress} />
       <KeyboardAvoidingView behavior="padding">
@@ -59,7 +59,6 @@ const HomeScreen = ({
           value={amount.toString()}
           keyboardType="numeric"
           onChangeText={text => setAmount(text)}
-          textColor={primaryColor}
         />
         {quoteCurrencies.map(quoteCurrency => (
           <React.Fragment key={quoteCurrency}>
@@ -67,7 +66,6 @@ const HomeScreen = ({
               buttonText={quoteCurrency}
               editable={false}
               value={isFetching ? '...' : (amount * rates[quoteCurrency]).toFixed(2)}
-              textColor={primaryColor}
               onRemove={() => onRemoveQuoteCurrency(quoteCurrency)}
             />
             <LastConverted

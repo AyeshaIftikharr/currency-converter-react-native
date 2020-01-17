@@ -1,20 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, StatusBar } from 'react-native';
-import EStyleSheet from 'react-native-extended-stylesheet';
 // components
 import { ListItem, Separator } from '../../../../ui-components/List';
-
-const styles = EStyleSheet.create({
-  $blue: '$primaryBlue',
-  $orange: '$primaryOrange',
-  $green: '$primaryGreen',
-  $purple: '$primaryPurple',
-});
+import { THEME_TYPES } from '../../../../constants';
 
 const ThemesScreen = ({ navigation, changeTheme }) => {
-  const handlePressTheme = color => {
-    changeTheme(color);
+  const handlePressTheme = type => {
+    changeTheme(type);
     navigation.goBack(null);
   };
 
@@ -23,34 +16,34 @@ const ThemesScreen = ({ navigation, changeTheme }) => {
       <StatusBar translucent={false} barStyle="default" />
       <ListItem
         text="Blue"
-        onPress={() => handlePressTheme(styles.$blue)}
+        onPress={() => handlePressTheme(THEME_TYPES.BLUE.value)}
         selected
         checkmark={false}
-        iconBackground={styles.$blue}
+        iconBackground={THEME_TYPES.BLUE.color}
       />
       <Separator />
       <ListItem
         text="Orange"
-        onPress={() => handlePressTheme(styles.$orange)}
+        onPress={() => handlePressTheme(THEME_TYPES.ORANGE.value)}
         selected
         checkmark={false}
-        iconBackground={styles.$orange}
+        iconBackground={THEME_TYPES.ORANGE.color}
       />
       <Separator />
       <ListItem
         text="Green"
-        onPress={() => handlePressTheme(styles.$green)}
+        onPress={() => handlePressTheme(THEME_TYPES.GREEN.value)}
         selected
         checkmark={false}
-        iconBackground={styles.$green}
+        iconBackground={THEME_TYPES.GREEN.color}
       />
       <Separator />
       <ListItem
         text="Purple"
-        onPress={() => handlePressTheme(styles.$purple)}
+        onPress={() => handlePressTheme(THEME_TYPES.PURPLE.value)}
         selected
         checkmark={false}
-        iconBackground={styles.$purple}
+        iconBackground={THEME_TYPES.PURPLE.color}
       />
       <Separator />
     </ScrollView>

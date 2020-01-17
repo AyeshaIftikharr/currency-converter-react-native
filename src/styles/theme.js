@@ -1,6 +1,9 @@
 import { THEME_TYPES } from '../constants';
 
-export const DEAFULT_PRIMARY_COLOR = '#4F6D7A';
+export const BLUE = '#4F6D7A';
+export const ORANGE = '#D57A66';
+export const GREEN = '#00BD9D';
+export const PURPLE = '#9E768F';
 
 const commonThemeProps = {
   white: '#FFFFFF',
@@ -8,41 +11,24 @@ const commonThemeProps = {
   inputText: '#797979',
   lightGrey: '#F0F0F0',
   darkText: '#343434',
-  blue: '#4F6D7A',
-  orange: '#D57A66',
-  green: '#00BD9D',
-  purple: '#9E768F',
 };
 
-// export const BLUE_THEME = {
-//   primaryColor: '#4F6D7A',
-//   ...commonThemeProps,
-// };
-
 export const BLUE_THEME = {
-  primaryColor: '#4F6D7A',
-  white: '#FFFFFF',
-  border: '#E2E2E2',
-  inputText: '#797979',
-  lightGrey: '#F0F0F0',
-  darkText: '#343434',
-  blue: '#4F6D7A',
-  orange: '#D57A66',
-  green: '#00BD9D',
-  purple: '#9E768F',
+  primaryColor: BLUE,
+  ...commonThemeProps,
 };
 
 export const ORANGE_THEME = {
-  primaryColor: '#D57A66',
+  primaryColor: ORANGE,
   ...commonThemeProps,
 };
 
 export const GREEN_THEME = {
-  primaryColor: '#00BD9D',
+  primaryColor: GREEN,
   ...commonThemeProps,
 };
 export const PURPLE_THEME = {
-  primaryColor: '#9E768F',
+  primaryColor: PURPLE,
   ...commonThemeProps,
 };
 
@@ -50,13 +36,13 @@ export const getTheme = color => {
   const defaultTheme = { ...BLUE_THEME };
 
   switch (color) {
-    case THEME_TYPES.BLUE:
+    case THEME_TYPES.BLUE.value:
       return BLUE_THEME;
-    case THEME_TYPES.ORANGE:
+    case THEME_TYPES.ORANGE.value:
       return ORANGE_THEME;
-    case THEME_TYPES.GREEN:
+    case THEME_TYPES.GREEN.value:
       return GREEN_THEME;
-    case THEME_TYPES.PURPLE:
+    case THEME_TYPES.PURPLE.value:
       return PURPLE_THEME;
     default:
       return defaultTheme;

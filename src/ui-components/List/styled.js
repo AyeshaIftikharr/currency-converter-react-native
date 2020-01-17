@@ -70,7 +70,8 @@ export const IconView = styled(NativeView)`
   height: 30px;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme, visible }) => (visible ? theme.primaryColor : 'transparent')};
+  background-color: ${({ theme, visible, iconBackground }) =>
+    visible ? (iconBackground ? iconBackground : theme.primaryColor) : 'transparent'};
 `;
 
 export const CheckIcon = styled(NativeImage)`
