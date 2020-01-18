@@ -12,8 +12,8 @@ const ClearButton = ({ text, onPress }) => (
 );
 
 ClearButton.propTypes = {
-  text: PropTypes.string,
-  onPress: PropTypes.func,
+  text: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
 };
 
 export default ClearButton;

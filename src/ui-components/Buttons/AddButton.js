@@ -11,8 +11,8 @@ const AddButton = ({ text, onPress }) => (
 );
 
 AddButton.propTypes = {
-  text: PropTypes.string,
-  onPress: PropTypes.func,
+  text: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
 };
 
 export default AddButton;

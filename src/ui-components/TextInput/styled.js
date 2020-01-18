@@ -1,15 +1,10 @@
 import styled from 'styled-components';
-import {
-  View as NativeView,
-  Text as NativeText,
-  TextInput as NativeTextInput,
-  TouchableHighlight as NativeTouchableHighlight,
-} from 'react-native';
+import { View, Text, TextInput, TouchableHighlight } from 'react-native';
 
 const INPUT_HEIGHT = 48;
 const BORDER_RADIUS = 4;
 
-export const View = styled(NativeView)`
+export const StyledView = styled(View)`
   background-color: ${({ theme, editable }) => (!editable ? theme.lightGrey : theme.white)};
   width: 90%;
   height: ${INPUT_HEIGHT}px;
@@ -20,7 +15,7 @@ export const View = styled(NativeView)`
   align-items: center;
 `;
 
-export const TouchableHighlight = styled(NativeTouchableHighlight)`
+export const StyledTouchableHighlight = styled(TouchableHighlight)`
   height: ${INPUT_HEIGHT}px;
   align-items: center;
   justify-content: center;
@@ -29,7 +24,7 @@ export const TouchableHighlight = styled(NativeTouchableHighlight)`
   border-bottom-left-radius: ${BORDER_RADIUS}px;
 `;
 
-export const Text = styled(NativeText)`
+export const StyledText = styled(Text)`
   font-weight: 600;
   font-size: 20px;
   padding-left: 16px;
@@ -37,13 +32,13 @@ export const Text = styled(NativeText)`
   color: ${({ theme }) => theme.primaryColor};
 `;
 
-export const Separator = styled(NativeView)`
+export const StyledSeparator = styled(View)`
   height: ${INPUT_HEIGHT}px;
   width: 1px;
   background-color: ${({ theme }) => theme.border};
 `;
 
-export const TextInput = styled(NativeTextInput)`
+export const StyledTextInput = styled(TextInput)`
   height: ${INPUT_HEIGHT}px;
   flex: 1;
   font-size: 18px;

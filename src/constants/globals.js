@@ -1,4 +1,4 @@
-import { BLUE, GREEN, ORANGE, PURPLE } from '../styles/Theme';
+import { BLUE, GREEN, ORANGE, PURPLE } from '../theme';
 
 export const THEME_TYPES = {
   BLUE: {

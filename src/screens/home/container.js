@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import HomeScreen from './HomeScreen';
+import { Home } from './HomeScreen';
 import { connectAlert } from '../../ui-components/Alert';
 // actions
 import { actions } from '../../actions/currency';
@@ -20,12 +20,12 @@ const mapStateToProps = ({ currency, theme }) => {
   };
 };
 
-const mapDispatchToProps = dispatch => ({
-  getInitialConversion: () => dispatch(actions.getInitialConversion()),
-  onRemoveQuoteCurrency: currency => dispatch(actions.onRemoveCurrency(currency)),
-});
+const mapDispatchToProps = {
+  getInitialConversion: actions.getInitialConversion,
+  onRemoveQuoteCurrency: actions.onRemoveCurrency,
+};
 
-export default connect(
+export const HomeScreen = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(connectAlert(HomeScreen));
+)(connectAlert(Home));

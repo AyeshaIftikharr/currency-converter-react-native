@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native';
 import styled from 'styled-components';
-import { View as NativeView, Text as NativeText, Image as NativeImage } from 'react-native';
+import { View, Text, Image } from 'react-native';
 
-export const View = styled(NativeView)`
+export const StyledView = styled(View)`
   padding: 16px 20px 16px 20px;
   justify-content: space-between;
   align-items: center;
@@ -10,19 +10,19 @@ export const View = styled(NativeView)`
   background-color: ${({ theme }) => theme.white};
 `;
 
-export const Text = styled(NativeText)`
+export const StyledText = styled(Text)`
   color: ${({ theme }) => theme.darkText};
   font-size: 16px;
 `;
 
-export const SeparatorLine = styled(NativeView)`
+export const StyledSeparatorLine = styled(View)`
   background-color: ${({ theme }) => theme.border};
   height: ${StyleSheet.hairlineWidth}px;
   flex: 1;
   margin-left: 20px;
 `;
 
-export const IconView = styled(NativeView)`
+export const StyledIconView = styled(View)`
   border-radius: 15px;
   width: 30px;
   height: 30px;
@@ -32,6 +32,6 @@ export const IconView = styled(NativeView)`
     visible ? (iconBackground ? iconBackground : theme.primaryColor) : 'transparent'};
 `;
 
-export const CheckIcon = styled(NativeImage)`
+export const StyledCheckIcon = styled(Image)`
   width: 18px;
 `;

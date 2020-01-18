@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import CurrencyListScreen from './CurrencyListScreen';
+import { CurrencyList } from './CurrencyListScreen';
 import { actions } from '../../../actions/currency';
 
 const mapStateToProps = ({ currency }) => ({
@@ -7,11 +7,11 @@ const mapStateToProps = ({ currency }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  changeBaseCurrency: currency => dispatch(actions.changeBaseCurrency(currency)),
-  onAddCurrency: currency => dispatch(actions.onAddCurrency(currency)),
+  changeBaseCurrency: actions.changeBaseCurrency,
+  onAddCurrency: actions.onAddCurrency,
 });
 
-export default connect(
+export const CurrencyListScreen = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(CurrencyListScreen);
+)(CurrencyList);

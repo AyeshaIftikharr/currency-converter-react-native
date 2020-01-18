@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { View, Text, ImageBackground, Image } from './styled';
 
 const Logo = () => {
@@ -11,10 +10,6 @@ const Logo = () => {
       <Text>Currency Converter</Text>
     </View>
   );
-};
-
-Logo.propTypes = {
-  tintColor: PropTypes.any,
 };
 
 export default Logo;

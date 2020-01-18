@@ -1,10 +1,7 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { StatusBar } from 'react-native';
-import HomeScreen from '../screens/home/container';
-import CurrencyListScreen from '../screens/home/currency-list/container';
-import OptionsScreen from '../screens/home/options/OptionsScreen';
-import ThemesScreen from '../screens/home/options/themes/container';
+import { HomeScreen, CurrencyListScreen, OptionsScreen, ThemesScreen } from '../screens/home';
 
 const HomeStack = createStackNavigator(
   {
@@ -42,7 +39,7 @@ const CurrencyListStack = createStackNavigator({
   },
 });
 
-const Navigator = createStackNavigator(
+const StackNavigator = createStackNavigator(
   {
     Home: {
       screen: HomeStack,
@@ -60,4 +57,4 @@ const Navigator = createStackNavigator(
   },
 );
 
-export default createAppContainer(Navigator);
+export const Navigator = createAppContainer(StackNavigator);

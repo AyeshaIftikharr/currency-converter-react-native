@@ -6,13 +6,7 @@ const connectAlert = WrappedComponent => {
   class ConnectedAlert extends Component {
     render() {
       const { alertWithType, alert } = this.context;
-      return (
-        <WrappedComponent
-          {...this.props}
-          alertWithType={alertWithType}
-          alert={alert}
-        />
-      );
+      return <WrappedComponent {...this.props} alertWithType={alertWithType} alert={alert} />;
     }
   }
 

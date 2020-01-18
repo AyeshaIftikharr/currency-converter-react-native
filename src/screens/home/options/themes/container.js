@@ -1,14 +1,13 @@
 import { connect } from 'react-redux';
-import ThemesScreen from './ThemesScreen';
+import { Themes } from './ThemesScreen';
 // actions
 import { actions } from '../../../../actions/theme';
 
-const mapStateToProps = () => ({});
-const mapDispatchToProps = dispatch => ({
-  changeTheme: color => dispatch(actions.changePrimaryColor(color)),
-});
+const mapDispatchToProps = {
+  changeTheme: actions.changePrimaryColor,
+};
 
-export default connect(
-  mapStateToProps,
+export const ThemesScreen = connect(
+  null,
   mapDispatchToProps,
-)(ThemesScreen);
+)(Themes);

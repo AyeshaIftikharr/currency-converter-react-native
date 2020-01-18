@@ -9,7 +9,7 @@ import { AddButton } from '../../ui-components/Buttons';
 import { LastConverted } from '../../ui-components/Text';
 import { Header } from '../../ui-components/Header';
 
-const HomeScreen = ({
+export const Home = ({
   navigation: { navigate },
   isFetching,
   baseCurrency,
@@ -81,17 +81,15 @@ const HomeScreen = ({
   );
 };
 
-HomeScreen.propTypes = {
-  isFetching: PropTypes.bool,
-  baseCurrency: PropTypes.string,
+Home.propTypes = {
+  isFetching: PropTypes.bool.isRequired,
+  baseCurrency: PropTypes.string.isRequired,
   currencyError: PropTypes.string,
-  quoteCurrencies: PropTypes.array,
-  navigation: PropTypes.object,
-  lastConvertedDate: PropTypes.object,
-  rates: PropTypes.object,
-  alertWithType: PropTypes.func,
-  getInitialConversion: PropTypes.func,
-  onRemoveQuoteCurrency: PropTypes.func,
+  quoteCurrencies: PropTypes.array.isRequired,
+  navigation: PropTypes.object.isRequired,
+  lastConvertedDate: PropTypes.object.isRequired,
+  rates: PropTypes.object.isRequired,
+  alertWithType: PropTypes.func.isRequired,
+  getInitialConversion: PropTypes.func.isRequired,
+  onRemoveQuoteCurrency: PropTypes.func.isRequired,
 };
-
-export default HomeScreen;

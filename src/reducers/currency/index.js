@@ -24,7 +24,7 @@ const getConversionsFromStoreIfExist = (state, action) => {
   };
 };
 
-export default (state = initialState, action) => {
+export const currencyReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.CURRENCY_CHANGE_BASE:
       return {
@@ -40,9 +40,7 @@ export default (state = initialState, action) => {
     case types.CURRENCY_QUOTE_CURRENCY_REMOVE:
       return {
         ...state,
-        quoteCurrencies: state.quoteCurrencies.filter(
-          quoteCurrency => quoteCurrency !== action.payload,
-        ),
+        quoteCurrencies: state.quoteCurrencies.filter(quoteCurrency => quoteCurrency !== action.payload),
       };
     case types.CURRENCY_GET_INITIAL_CONVERSION_RATES:
       return {

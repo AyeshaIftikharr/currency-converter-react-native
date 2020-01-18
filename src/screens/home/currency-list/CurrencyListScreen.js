@@ -6,7 +6,7 @@ import { View } from './styled';
 import { ListItem, Separator } from '../../../ui-components/List';
 import CURRENCIES from '../../../static/data/currencyList';
 
-const CurrencyListScreen = ({ navigation, baseCurrency, changeBaseCurrency, onAddCurrency }) => {
+export const CurrencyList = ({ navigation, baseCurrency, changeBaseCurrency, onAddCurrency }) => {
   const handlePress = currency => {
     const { type } = navigation.state.params;
     if (type === 'base') {
@@ -36,11 +36,9 @@ const CurrencyListScreen = ({ navigation, baseCurrency, changeBaseCurrency, onAd
   );
 };
 
-CurrencyListScreen.propTypes = {
-  baseCurrency: PropTypes.string,
-  navigation: PropTypes.object,
-  onAddCurrency: PropTypes.func,
-  changeBaseCurrency: PropTypes.func,
+CurrencyList.propTypes = {
+  baseCurrency: PropTypes.string.isRequired,
+  navigation: PropTypes.object.isRequired,
+  onAddCurrency: PropTypes.func.isRequired,
+  changeBaseCurrency: PropTypes.func.isRequired,
 };
-
-export default CurrencyListScreen;

@@ -1,7 +1,7 @@
 import { all } from 'redux-saga/effects';
 
-import currencyWatcher from './currency';
+import { currencyWatcher } from './currency';
 
-export default function* rootSaga() {
+export const rootSaga = function*() {
   yield all([currencyWatcher()]);
-}
+};

@@ -11,7 +11,7 @@ const Header = ({ onPress }) => (
 );
 
 Header.propTypes = {
-  onPress: PropTypes.func,
+  onPress: PropTypes.func.isRequired,
 };
 
 export default Header;

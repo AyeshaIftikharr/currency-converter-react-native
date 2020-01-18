@@ -1,12 +1,7 @@
 import styled from 'styled-components';
-import {
-  View as NativeView,
-  Image as NativeImage,
-  TouchableOpacity as NativeTouchableOpacity,
-  Platform,
-} from 'react-native';
+import { View, Image, TouchableOpacity, Platform } from 'react-native';
 
-export const View = styled(NativeView)`
+export const StyledView = styled(View)`
   position: absolute;
   left: 0;
   top: 0;
@@ -14,11 +9,11 @@ export const View = styled(NativeView)`
   padding-top: ${Platform.OS === 'ios' ? '20px' : '0px'};
 `;
 
-export const Image = styled(NativeImage)`
+export const StyledImage = styled(Image)`
   width: 18px;
 `;
 
-export const TouchableOpacity = styled(NativeTouchableOpacity)`
+export const StyledTouchableOpacity = styled(TouchableOpacity)`
   align-self: flex-end;
   padding: 5px 20px 5px 20px;
 `;

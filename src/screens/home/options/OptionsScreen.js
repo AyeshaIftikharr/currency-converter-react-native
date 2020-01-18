@@ -8,7 +8,7 @@ import { connectAlert } from '../../../ui-components/Alert';
 const ICON_COLOR = '#868686';
 const ICON_SIZE = 20;
 
-const OptionsScreen = ({ navigation, alertWithType }) => {
+const Options = ({ navigation, alertWithType }) => {
   const handlePressThemes = () => navigation.navigate('Themes');
 
   const handlePressSite = () => {
@@ -36,9 +36,9 @@ const OptionsScreen = ({ navigation, alertWithType }) => {
   );
 };
 
-OptionsScreen.propTypes = {
-  navigation: PropTypes.object,
-  alertWithType: PropTypes.func,
+Options.propTypes = {
+  navigation: PropTypes.object.isRequired,
+  alertWithType: PropTypes.func.isRequired,
 };
 
-export default connectAlert(OptionsScreen);
+export const OptionsScreen = connectAlert(Options);

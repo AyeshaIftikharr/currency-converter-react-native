@@ -3,7 +3,7 @@ import { call, put, select } from 'redux-saga/effects';
 import { getLatestRate } from '../../api';
 import { types } from '../../actions/currency';
 
-export const fetchLatestConversionRates = function* (action) {
+export const fetchLatestConversionRates = function*(action) {
   try {
     let { payload } = action;
     if (!payload) {

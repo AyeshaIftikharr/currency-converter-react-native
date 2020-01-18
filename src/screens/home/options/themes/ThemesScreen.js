@@ -5,7 +5,7 @@ import { ScrollView, StatusBar } from 'react-native';
 import { ListItem, Separator } from '../../../../ui-components/List';
 import { THEME_TYPES } from '../../../../constants';
 
-const ThemesScreen = ({ navigation, changeTheme }) => {
+export const Themes = ({ navigation, changeTheme }) => {
   const handlePressTheme = type => {
     changeTheme(type);
     navigation.goBack(null);
@@ -50,9 +50,7 @@ const ThemesScreen = ({ navigation, changeTheme }) => {
   );
 };
 
-ThemesScreen.propTypes = {
-  navigation: PropTypes.object,
-  changeTheme: PropTypes.func,
+Themes.propTypes = {
+  navigation: PropTypes.object.isRequired,
+  changeTheme: PropTypes.func.isRequired,
 };
-
-export default ThemesScreen;

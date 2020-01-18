@@ -1,5 +1,5 @@
-import HomeScreen from './container';
-import CurrencyListScreen from './currency-list';
-export * from './options';
+import { HomeScreen } from './container';
+import { CurrencyListScreen } from './currency-list';
+import { OptionsScreen, ThemesScreen } from './options';
 
-export { HomeScreen, CurrencyListScreen };
+export { HomeScreen, CurrencyListScreen, OptionsScreen, ThemesScreen };

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import Navigator from './routes';
-import ThemeProvider from './styles/ThemeProvider';
+import { Navigator } from './routes';
+import { ThemeProvider } from './theme/ThemeProvider';
 import { AlertProvider } from './ui-components/Alert';
-import STORE from './store';
+import { store } from './store';
 
 const App = () => (
-  <Provider store={STORE}>
+  <Provider store={store}>
     <ThemeProvider>
       <AlertProvider>
         <Navigator onNavigationStateChange={null} />
