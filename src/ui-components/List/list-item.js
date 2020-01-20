@@ -3,7 +3,7 @@ import React from 'react';
 import { TouchableHighlight } from 'react-native';
 
 import { StyledView, StyledText } from './styled';
-import { Icon } from './Icon';
+import { Icon } from './icon';
 
 export const ListItem = ({
   text,

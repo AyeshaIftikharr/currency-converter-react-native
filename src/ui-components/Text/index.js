@@ -1,1 +1,1 @@
-export { LastConverted } from './LastConverted';
+export { LastConverted } from './last-converted';

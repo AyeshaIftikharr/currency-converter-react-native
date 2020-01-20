@@ -1,11 +1,11 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Navigator } from './routes';
-import { ThemeProvider } from './theme/ThemeProvider';
+import { ThemeProvider } from './theme/theme-provider';
 import { AlertProvider } from './ui-components/Alert';
 import { store } from './store';
 
-const App = () => (
+export const App = () => (
   <Provider store={store}>
     <ThemeProvider>
       <AlertProvider>
@@ -14,5 +14,3 @@ const App = () => (
     </ThemeProvider>
   </Provider>
 );
-
-export default App;

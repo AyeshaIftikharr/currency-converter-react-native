@@ -1,1 +1,1 @@
-export { InputWithButton } from './InputWithButton';
+export { InputWithButton } from './input-with-button';

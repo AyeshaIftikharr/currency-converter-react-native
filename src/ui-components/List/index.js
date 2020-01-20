@@ -1,5 +1,5 @@
-import { ListItem } from './ListItem';
-import { Separator } from './Separator';
-import { Icon } from './Icon';
+import { ListItem } from './list-item';
+import { Separator } from './separator';
+import { Icon } from './icon';
 
 export { ListItem, Separator, Icon };

@@ -5,44 +5,44 @@ const INPUT_HEIGHT = 48;
 const BORDER_RADIUS = 4;
 
 export const StyledView = styled(View)`
+  align-items: center;
   background-color: ${({ theme, editable }) => (!editable ? theme.lightGrey : theme.white)};
-  width: 90%;
-  height: ${INPUT_HEIGHT}px;
   border-radius: ${BORDER_RADIUS}px;
   flex-direction: row;
-  margin-top: 11px;
+  height: ${INPUT_HEIGHT}px;
   margin-bottom: 11px;
-  align-items: center;
+  margin-top: 11px;
+  width: 90%;
 `;
 
 export const StyledTouchableHighlight = styled(TouchableHighlight)`
-  height: ${INPUT_HEIGHT}px;
   align-items: center;
-  justify-content: center;
   background-color: ${({ theme }) => theme.white};
-  border-top-left-radius: ${BORDER_RADIUS}px;
   border-bottom-left-radius: ${BORDER_RADIUS}px;
+  border-top-left-radius: ${BORDER_RADIUS}px;
+  height: ${INPUT_HEIGHT}px;
+  justify-content: center;
 `;
 
 export const StyledText = styled(Text)`
-  font-weight: 600;
+  color: ${({ theme }) => theme.primaryColor};
   font-size: 20px;
+  font-weight: 600;
   padding-left: 16px;
   padding-right: 16px;
-  color: ${({ theme }) => theme.primaryColor};
 `;
 
 export const StyledSeparator = styled(View)`
+  background-color: ${({ theme }) => theme.border};
   height: ${INPUT_HEIGHT}px;
   width: 1px;
-  background-color: ${({ theme }) => theme.border};
 `;
 
 export const StyledTextInput = styled(TextInput)`
-  color: ${({ theme }) => theme.inputText};
-  flex: 1;
-  font-size: 18px;
-  height: ${INPUT_HEIGHT}px;
-  padding-left: 8px;
   padding-right: 8px;
+  padding-left: 8px;
+  height: ${INPUT_HEIGHT}px;
+  font-size: 18px;
+  flex: 1;
+  color: ${({ theme }) => theme.inputText};
 `;
