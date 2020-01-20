@@ -1,7 +1,6 @@
 {
   "editor.tabSize": 2,
-  "editor.rulers": [100],
-  // "eslint.autoFixOnSave": true, // Has now been updated to the last setting
+  "editor.rulers": [120],
   "editor.formatOnSave": false,
   // Enable per-language
   "[javascript]": {
