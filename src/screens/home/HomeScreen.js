@@ -48,15 +48,15 @@ export const Home = ({
 
   return (
     <MainLayout>
-      <StatusBar translucent={false} barStyle="light-content" />
+      <StatusBar translucent={false} barStyle='light-content' />
       <Header onPress={handleOptionsPress} />
-      <KeyboardAvoidingView behavior="padding">
+      <KeyboardAvoidingView behavior='padding'>
         <Logo />
         <InputWithButton
           buttonText={baseCurrency}
           onPress={handlePressBaseCurrency}
           value={amount.toString()}
-          keyboardType="numeric"
+          keyboardType='numeric'
           onChangeText={text => setAmount(text)}
         />
         {quoteCurrencies.map(quoteCurrency => (
@@ -75,7 +75,7 @@ export const Home = ({
             />
           </React.Fragment>
         ))}
-        <AddButton text="Add" onPress={onAddQuoteCurrency} />
+        <AddButton text='Add' onPress={onAddQuoteCurrency} />
       </KeyboardAvoidingView>
     </MainLayout>
   );

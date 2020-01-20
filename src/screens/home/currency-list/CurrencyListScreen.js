@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FlatList, StatusBar } from 'react-native';
-
-import { View } from './styled';
+// components
 import { ListItem, Separator } from '../../../ui-components/List';
 import CURRENCIES from '../../../static/data/currencyList';
+// styles
+import { StyledView } from './styled';
 
 export const CurrencyList = ({ navigation, baseCurrency, changeBaseCurrency, onAddCurrency }) => {
   const handlePress = currency => {
@@ -18,8 +19,8 @@ export const CurrencyList = ({ navigation, baseCurrency, changeBaseCurrency, onA
   };
 
   return (
-    <View>
-      <StatusBar translucent={false} barStyle="light-content" />
+    <StyledView>
+      <StatusBar translucent={false} barStyle='light-content' />
       <FlatList
         data={CURRENCIES}
         renderItem={({ item }) => (
@@ -32,7 +33,7 @@ export const CurrencyList = ({ navigation, baseCurrency, changeBaseCurrency, onA
         keyExtractor={item => item}
         ItemSeparatorComponent={Separator}
       />
-    </View>
+    </StyledView>
   );
 };
 

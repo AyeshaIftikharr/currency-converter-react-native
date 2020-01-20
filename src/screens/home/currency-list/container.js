@@ -6,10 +6,10 @@ const mapStateToProps = ({ currency }) => ({
   baseCurrency: currency.baseCurrency,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = {
   changeBaseCurrency: actions.changeBaseCurrency,
   onAddCurrency: actions.onAddCurrency,
-});
+};
 
 export const CurrencyListScreen = connect(
   mapStateToProps,

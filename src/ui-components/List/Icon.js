@@ -6,7 +6,7 @@ const Icon = ({ visible, checkmark, iconBackground }) => {
   if (visible) {
     return (
       <IconView visible={visible} iconBackground={iconBackground}>
-        {checkmark && <CheckIcon source={require('./images/check.png')} resizeMode="contain" />}
+        {checkmark && <CheckIcon source={require('./images/check.png')} resizeMode='contain' />}
       </IconView>
     );
   }

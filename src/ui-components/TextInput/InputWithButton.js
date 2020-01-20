@@ -10,7 +10,7 @@ const InputWithButton = ({ buttonText, onPress, editable = true, textColor, onRe
         <Text>{buttonText}</Text>
       </TouchableHighlight>
       <Separator />
-      <TextInput underlineColorAndroid="transparent" {...props} />
+      <TextInput underlineColorAndroid='transparent' {...props} />
       {onRemove && (
         <TouchableHighlight onPress={onRemove} underlayColor={UNDERLAY_COLOR}>
           <Text>-</Text>

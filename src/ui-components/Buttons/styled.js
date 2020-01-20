@@ -18,6 +18,6 @@ export const StyledImage = styled(Image)`
 export const StyledText = styled(Text)`
   color: ${({ theme }) => theme.white};
   font-size: 14px;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0 20px 0px;
   font-weight: 300;
 `;

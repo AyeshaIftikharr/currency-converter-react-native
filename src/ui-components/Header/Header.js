@@ -5,7 +5,7 @@ import { View, Image, TouchableOpacity } from './styled';
 const Header = ({ onPress }) => (
   <View>
     <TouchableOpacity onPress={onPress}>
-      <Image resizeMode="contain" source={require('./images/gear.png')} />
+      <Image resizeMode='contain' source={require('./images/gear.png')} />
     </TouchableOpacity>
   </View>
 );

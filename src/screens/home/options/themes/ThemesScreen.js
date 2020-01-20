@@ -13,9 +13,9 @@ export const Themes = ({ navigation, changeTheme }) => {
 
   return (
     <ScrollView>
-      <StatusBar translucent={false} barStyle="default" />
+      <StatusBar translucent={false} barStyle='default' />
       <ListItem
-        text="Blue"
+        text='Blue'
         onPress={() => handlePressTheme(THEME_TYPES.BLUE.value)}
         selected
         checkmark={false}
@@ -23,7 +23,7 @@ export const Themes = ({ navigation, changeTheme }) => {
       />
       <Separator />
       <ListItem
-        text="Orange"
+        text='Orange'
         onPress={() => handlePressTheme(THEME_TYPES.ORANGE.value)}
         selected
         checkmark={false}
@@ -31,7 +31,7 @@ export const Themes = ({ navigation, changeTheme }) => {
       />
       <Separator />
       <ListItem
-        text="Green"
+        text='Green'
         onPress={() => handlePressTheme(THEME_TYPES.GREEN.value)}
         selected
         checkmark={false}
@@ -39,7 +39,7 @@ export const Themes = ({ navigation, changeTheme }) => {
       />
       <Separator />
       <ListItem
-        text="Purple"
+        text='Purple'
         onPress={() => handlePressTheme(THEME_TYPES.PURPLE.value)}
         selected
         checkmark={false}

@@ -1,12 +1,13 @@
 import styled from 'styled-components';
-import { View, Image, TouchableOpacity, Platform } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
+import { getPadding } from '../../utils';
 
 export const StyledView = styled(View)`
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
-  padding-top: ${Platform.OS === 'ios' ? '20px' : '0px'};
+  padding-top: ${getPadding};
 `;
 
 export const StyledImage = styled(Image)`
