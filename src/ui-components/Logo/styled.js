@@ -9,20 +9,20 @@ export const StyledView = styled(View)`
 
 export const StyledImageBackground = styled(ImageBackground)`
   align-items: center;
+  height: ${imageWidth}px;
   justify-content: center;
   width: ${imageWidth}px;
-  height: ${imageWidth}px;
 `;
 
 export const StyledImage = styled(Image)`
-  width: ${imageWidth / 2}px;
   tint-color: ${({ theme }) => theme.primaryColor};
+  width: ${imageWidth / 2}px;
 `;
 
 export const StyledText = styled(Text)`
-  font-weight: 600;
+  color: ${({ theme }) => theme.white};
   font-size: 28px;
+  font-weight: 600;
   letter-spacing: -0.5px;
   margin-top: 15px;
-  color: ${({ theme }) => theme.white};
 `;

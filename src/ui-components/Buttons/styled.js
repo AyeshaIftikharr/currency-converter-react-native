@@ -11,13 +11,13 @@ export const StyledView = styled(View)`
 `;
 
 export const StyledImage = styled(Image)`
-  width: 19px;
   margin-right: 11px;
+  width: 19px;
 `;
 
 export const StyledText = styled(Text)`
   color: ${({ theme }) => theme.white};
   font-size: 14px;
-  padding: 20px 0 20px 0px;
   font-weight: 300;
+  padding: 20px 0 20px 0px;
 `;

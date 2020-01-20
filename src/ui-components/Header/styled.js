@@ -3,11 +3,11 @@ import { View, Image, TouchableOpacity } from 'react-native';
 import { getPadding } from '../../utils';
 
 export const StyledView = styled(View)`
-  position: absolute;
   left: 0;
-  top: 0;
-  right: 0;
   padding-top: ${getPadding};
+  position: absolute;
+  right: 0;
+  top: 0;
 `;
 
 export const StyledImage = styled(Image)`

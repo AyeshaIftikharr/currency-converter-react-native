@@ -39,10 +39,10 @@ export const StyledSeparator = styled(View)`
 `;
 
 export const StyledTextInput = styled(TextInput)`
-  height: ${INPUT_HEIGHT}px;
+  color: ${({ theme }) => theme.inputText};
   flex: 1;
   font-size: 18px;
+  height: ${INPUT_HEIGHT}px;
   padding-left: 8px;
   padding-right: 8px;
-  color: ${({ theme }) => theme.inputText};
 `;

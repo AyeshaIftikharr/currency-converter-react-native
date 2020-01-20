@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { View, Text, Image } from 'react-native';
 
 export const StyledView = styled(View)`
-  padding: 16px 20px 16px 20px;
-  justify-content: space-between;
   align-items: center;
-  flex-direction: row;
   background-color: ${({ theme }) => theme.white};
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 20px 16px 20px;
 `;
 
 export const StyledText = styled(Text)`
@@ -17,19 +17,19 @@ export const StyledText = styled(Text)`
 
 export const StyledSeparatorLine = styled(View)`
   background-color: ${({ theme }) => theme.border};
-  height: ${StyleSheet.hairlineWidth}px;
   flex: 1;
+  height: ${StyleSheet.hairlineWidth}px;
   margin-left: 20px;
 `;
 
 export const StyledIconView = styled(View)`
-  border-radius: 15px;
-  width: 30px;
-  height: 30px;
   align-items: center;
-  justify-content: center;
   background-color: ${({ theme, visible, iconBackground }) =>
     visible ? (iconBackground ? iconBackground : theme.primaryColor) : 'transparent'};
+  border-radius: 15px;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
 `;
 
 export const StyledCheckIcon = styled(Image)`
