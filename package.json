@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint *.js src/",
+    "lint": "eslint *.js src/ --no-ignore .eslintrc.js",
+    "lint:watch": "yarn lint --watch",
     "devtools": "react-devtools"
   },
   "dependencies": {
