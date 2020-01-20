@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import currencies from './currencies';
-import theme from './theme';
+import { currencyReducer } from './currency';
+import { themeReducer } from './theme';
 
-export default combineReducers({
-  currencies,
-  theme,
+export const rootReducer = combineReducers({
+  currency: currencyReducer,
+  theme: themeReducer,
 });
