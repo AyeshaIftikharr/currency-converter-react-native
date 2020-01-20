@@ -1,4 +1,4 @@
-import ClearButton from './ClearButton';
-import AddButton from './AddButton';
+import { ClearButton } from './ClearButton';
+import { AddButton } from './AddButton';
 
 export { AddButton, ClearButton };

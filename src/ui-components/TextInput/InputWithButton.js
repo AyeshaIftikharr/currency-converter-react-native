@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View, Text, TouchableHighlight, TextInput, Separator } from './styled';
 import { UNDERLAY_COLOR } from '../../theme/Theme';
 
-const InputWithButton = ({ buttonText, onPress, editable = true, textColor, onRemove, ...props }) => {
+export const InputWithButton = ({ buttonText, onPress, editable = true, textColor, onRemove, ...props }) => {
   return (
     <View editable={editable}>
       <TouchableHighlight onPress={onPress} underlayColor={UNDERLAY_COLOR}>
@@ -26,5 +26,3 @@ InputWithButton.propTypes = {
   editable: PropTypes.bool,
   onRemove: PropTypes.func,
 };
-
-export default InputWithButton;

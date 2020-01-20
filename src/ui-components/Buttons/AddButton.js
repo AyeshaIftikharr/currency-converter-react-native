@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, TouchableOpacity, Text } from './styled';
 
-const AddButton = ({ text, onPress }) => (
+export const AddButton = ({ text, onPress }) => (
   <TouchableOpacity onPress={onPress}>
     <View>
       <Text>{text}</Text>
@@ -14,5 +14,3 @@ AddButton.propTypes = {
   text: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
 };
-
-export default AddButton;

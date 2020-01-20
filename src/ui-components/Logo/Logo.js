@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, ImageBackground, Image } from './styled';
 
-const Logo = () => {
+export const Logo = () => {
   return (
     <View>
       <ImageBackground resizeMode='contain' source={require('./images/background.png')}>
@@ -11,5 +11,3 @@ const Logo = () => {
     </View>
   );
 };
-
-export default Logo;

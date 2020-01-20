@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Image, TouchableOpacity } from './styled';
 
-const Header = ({ onPress }) => (
+export const Header = ({ onPress }) => (
   <View>
     <TouchableOpacity onPress={onPress}>
       <Image resizeMode='contain' source={require('./images/gear.png')} />
@@ -13,5 +13,3 @@ const Header = ({ onPress }) => (
 Header.propTypes = {
   onPress: PropTypes.func.isRequired,
 };
-
-export default Header;

@@ -5,7 +5,7 @@ import { TouchableHighlight } from 'react-native';
 import { View, Text } from './styled';
 import Icon from './Icon';
 
-const ListItem = ({
+export const ListItem = ({
   text,
   onPress,
   checkmark = true,
@@ -34,5 +34,3 @@ ListItem.propTypes = {
   customIcon: PropTypes.element,
   iconBackground: PropTypes.string,
 };
-
-export default ListItem;
