@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { View as NativeView } from 'react-native';
+import { View } from 'react-native';
 
-export const View = styled(NativeView)`
+export const StyledView = styled(View)`
   flex: 1;
 `;
