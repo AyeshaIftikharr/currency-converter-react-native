@@ -10,7 +10,7 @@ export const InputWithButton = ({ buttonText, onPress, editable = true, textColo
         <StyledText>{buttonText}</StyledText>
       </StyledTouchableHighlight>
       <StyledSeparator />
-      <StyledTextInput underlineColorAndroid='transparent' {...props} />
+      <StyledTextInput underlineColorAndroid="transparent" {...props} />
       {onRemove && (
         <StyledTouchableHighlight onPress={onRemove} underlayColor={UNDERLAY_COLOR}>
           <StyledText>-</StyledText>
@@ -22,7 +22,7 @@ export const InputWithButton = ({ buttonText, onPress, editable = true, textColo
 
 InputWithButton.propTypes = {
   buttonText: PropTypes.string.isRequired,
-  onPress: PropTypes.func.isRequired,
+  onPress: PropTypes.func,
   editable: PropTypes.bool,
   onRemove: PropTypes.func,
 };

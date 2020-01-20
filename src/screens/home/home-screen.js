@@ -82,7 +82,7 @@ export const Home = ({
 };
 
 Home.propTypes = {
-  isFetching: PropTypes.bool.isRequired,
+  isFetching: PropTypes.bool,
   baseCurrency: PropTypes.string.isRequired,
   currencyError: PropTypes.string,
   quoteCurrencies: PropTypes.array.isRequired,
