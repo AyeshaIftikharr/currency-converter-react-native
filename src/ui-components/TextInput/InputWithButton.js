@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyledView, StyledText, StyledTouchableHighlight, StyledTextInput, StyledSeparator } from './styled';
-import { UNDERLAY_COLOR } from '../../theme/Theme';
+import { UNDERLAY_COLOR } from '../../theme';
 
 export const InputWithButton = ({ buttonText, onPress, editable = true, textColor, onRemove, ...props }) => {
   return (
