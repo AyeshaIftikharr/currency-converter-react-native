@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { StatusBar, KeyboardAvoidingView } from 'react-native';
 // components
-import { MainLayout } from '../../ui-components/MainLayout';
-import { Logo } from '../../ui-components/Logo';
-import { InputWithButton } from '../../ui-components/TextInput';
-import { AddButton } from '../../ui-components/Buttons';
-import { LastConverted } from '../../ui-components/Text';
-import { Header } from '../../ui-components/Header';
+import { MainLayout } from '../../ui-components/main-layout';
+import { Logo } from '../../ui-components/logo';
+import { InputWithButton } from '../../ui-components/text-input';
+import { AddButton } from '../../ui-components/buttons';
+import { LastConverted } from '../../ui-components/text';
+import { Header } from '../../ui-components/header';
 
 export const Home = ({
   navigation: { navigate },

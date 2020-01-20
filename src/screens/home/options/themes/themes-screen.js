@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, StatusBar } from 'react-native';
 // components
-import { ListItem, Separator } from '../../../../ui-components/List';
+import { ListItem, Separator } from '../../../../ui-components/list';
 import { THEME_TYPES } from '../../../../constants';
 
 export const Themes = ({ navigation, changeTheme }) => {

@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, StatusBar, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { ListItem, Separator } from '../../../ui-components/List';
-import { connectAlert } from '../../../ui-components/Alert';
+import { ListItem, Separator } from '../../../ui-components/list';
+import { connectAlert } from '../../../ui-components/alert';
 
 import { ICON_COLOR, ICON_SIZE } from '../../../theme';
 

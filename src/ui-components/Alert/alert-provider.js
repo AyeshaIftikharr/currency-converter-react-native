@@ -1,10 +1,9 @@
-/* eslint-disable react-native/no-inline-styles */
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import DropdownAlert from 'react-native-dropdownalert';
 
-class AlertProvider extends Component {
+export class AlertProvider extends Component {
   static get childContextTypes() {
     return {
       alertWithType: PropTypes.func,
@@ -39,5 +38,3 @@ class AlertProvider extends Component {
     );
   }
 }
-
-export default AlertProvider;

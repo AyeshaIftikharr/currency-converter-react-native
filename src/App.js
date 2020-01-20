@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Navigator } from './routes';
 import { ThemeProvider } from './theme/theme-provider';
-import { AlertProvider } from './ui-components/Alert';
+import { AlertProvider } from './ui-components/alert';
 import { store } from './store';
 
 export const App = () => (
