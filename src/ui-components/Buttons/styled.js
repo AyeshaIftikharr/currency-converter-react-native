@@ -6,8 +6,8 @@ export const StyledTouchableOpacity = styled(TouchableOpacity)`
 `;
 
 export const StyledView = styled(View)`
-  flex-direction: row;
   align-items: center;
+  flex-direction: row;
 `;
 
 export const StyledImage = styled(Image)`
