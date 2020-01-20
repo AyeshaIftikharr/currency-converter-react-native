@@ -5,8 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { ListItem, Separator } from '../../../ui-components/List';
 import { connectAlert } from '../../../ui-components/Alert';
 
-const ICON_COLOR = '#868686';
-const ICON_SIZE = 20;
+import { ICON_COLOR, ICON_SIZE } from '../../../theme';
 
 const Options = ({ navigation, alertWithType }) => {
   const handlePressThemes = () => navigation.navigate('Themes');

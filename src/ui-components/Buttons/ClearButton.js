@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, TouchableOpacity, Text, Image } from './styled';
+import { StyledView, StyledTouchableOpacity, StyledText, StyledImage } from './styled';
 
 export const ClearButton = ({ text, onPress }) => (
-  <TouchableOpacity onPress={onPress}>
-    <View>
-      <Image resizeMode='contain' source={require('./images/icon.png')} />
-      <Text>{text}</Text>
-    </View>
-  </TouchableOpacity>
+  <StyledTouchableOpacity onPress={onPress}>
+    <StyledView>
+      <StyledImage resizeMode='contain' source={require('./images/icon.png')} />
+      <StyledText>{text}</StyledText>
+    </StyledView>
+  </StyledTouchableOpacity>
 );
 
 ClearButton.propTypes = {

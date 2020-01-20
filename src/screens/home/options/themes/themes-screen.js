@@ -16,7 +16,7 @@ export const Themes = ({ navigation, changeTheme }) => {
       <StatusBar translucent={false} barStyle='default' />
       <ListItem
         text='Blue'
-        onPress={() => handlePressTheme(THEME_TYPES.BLUE.value)}
+        onPress={() => handlePressTheme(THEME_TYPES.BLUE.enum)}
         selected
         checkmark={false}
         iconBackground={THEME_TYPES.BLUE.color}
@@ -24,7 +24,7 @@ export const Themes = ({ navigation, changeTheme }) => {
       <Separator />
       <ListItem
         text='Orange'
-        onPress={() => handlePressTheme(THEME_TYPES.ORANGE.value)}
+        onPress={() => handlePressTheme(THEME_TYPES.ORANGE.enum)}
         selected
         checkmark={false}
         iconBackground={THEME_TYPES.ORANGE.color}
@@ -32,7 +32,7 @@ export const Themes = ({ navigation, changeTheme }) => {
       <Separator />
       <ListItem
         text='Green'
-        onPress={() => handlePressTheme(THEME_TYPES.GREEN.value)}
+        onPress={() => handlePressTheme(THEME_TYPES.GREEN.enum)}
         selected
         checkmark={false}
         iconBackground={THEME_TYPES.GREEN.color}
@@ -40,7 +40,7 @@ export const Themes = ({ navigation, changeTheme }) => {
       <Separator />
       <ListItem
         text='Purple'
-        onPress={() => handlePressTheme(THEME_TYPES.PURPLE.value)}
+        onPress={() => handlePressTheme(THEME_TYPES.PURPLE.enum)}
         selected
         checkmark={false}
         iconBackground={THEME_TYPES.PURPLE.color}

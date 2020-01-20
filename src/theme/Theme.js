@@ -8,6 +8,8 @@ const THEME = {
   darkText: colors.DARK_TEXT,
 };
 
+export const ICON_SIZE = 20;
+
 export const THEME_LOOKUP = {
   BLUE: {
     primaryColor: colors.BLUE,

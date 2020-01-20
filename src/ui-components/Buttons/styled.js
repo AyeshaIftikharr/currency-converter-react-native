@@ -19,5 +19,5 @@ export const StyledText = styled(Text)`
   color: ${({ theme }) => theme.white};
   font-size: 14px;
   font-weight: 300;
-  padding: 20px 0 20px 0px;
+  padding: 20px 0 20px 0;
 `;

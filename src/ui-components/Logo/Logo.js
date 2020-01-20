@@ -1,13 +1,13 @@
 import React from 'react';
-import { View, Text, ImageBackground, Image } from './styled';
+import { StyledView, StyledText, StyledImageBackground, StyledImage } from './styled';
 
 export const Logo = () => {
   return (
-    <View>
-      <ImageBackground resizeMode='contain' source={require('./images/background.png')}>
-        <Image resizeMode='contain' source={require('./images/logo.png')} />
-      </ImageBackground>
-      <Text>Currency Converter</Text>
-    </View>
+    <StyledView>
+      <StyledImageBackground resizeMode='contain' source={require('./images/background.png')}>
+        <StyledImage resizeMode='contain' source={require('./images/logo.png')} />
+      </StyledImageBackground>
+      <StyledText>Currency Converter</StyledText>
+    </StyledView>
   );
 };

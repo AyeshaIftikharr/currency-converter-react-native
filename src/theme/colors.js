@@ -4,6 +4,7 @@ export const GREEN = '#00BD9D';
 export const PURPLE = '#9E768F';
 
 export const UNDERLAY_COLOR = '#E6E6E6';
+export const ICON_COLOR = '#868686';
 
 export const WHITE = '#FFFFFF';
 export const BORDER = '#E2E2E2';

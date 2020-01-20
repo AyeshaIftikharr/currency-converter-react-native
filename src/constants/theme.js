@@ -2,19 +2,19 @@ import { BLUE, GREEN, ORANGE, PURPLE } from '../theme';
 
 export const THEME_TYPES = {
   BLUE: {
-    value: 'BLUE',
+    enum: 'BLUE',
     color: BLUE,
   },
   GREEN: {
-    value: 'GREEN',
+    enum: 'GREEN',
     color: GREEN,
   },
   ORANGE: {
-    value: 'ORANGE',
+    enum: 'ORANGE',
     color: ORANGE,
   },
   PURPLE: {
-    value: 'PURPLE',
+    enum: 'PURPLE',
     color: PURPLE,
   },
 };

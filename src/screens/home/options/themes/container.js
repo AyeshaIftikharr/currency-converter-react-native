@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { Themes } from './ThemesScreen';
+import { Themes } from './themes-screen';
 // actions
 import { actions } from '../../../../actions/theme';
 

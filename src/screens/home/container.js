@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { Home } from './HomeScreen';
+import { Home } from './home-screen';
 import { connectAlert } from '../../ui-components/Alert';
 // actions
 import { actions } from '../../actions/currency';

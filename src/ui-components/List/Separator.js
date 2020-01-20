@@ -1,5 +1,5 @@
 import React from 'react';
 
-import { SeparatorLine } from './styled';
+import { StyledSeparatorLine } from './styled';
 
-export const Separator = () => <SeparatorLine />;
+export const Separator = () => <StyledSeparatorLine />;

@@ -7,7 +7,7 @@ const CustomThemeProvider = ({ theme, children }) => <Provider theme={theme}>{ch
 
 CustomThemeProvider.propTypes = {
   theme: PropTypes.object,
-  children: PropTypes.any,
+  children: PropTypes.node,
 };
 
 const mapStateToProps = ({ theme }) => ({ theme: { ...theme.theme } });

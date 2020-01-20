@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, TouchableOpacity, Text } from './styled';
+import { StyledView, StyledTouchableOpacity, StyledText } from './styled';
 
 export const AddButton = ({ text, onPress }) => (
-  <TouchableOpacity onPress={onPress}>
-    <View>
-      <Text>{text}</Text>
-    </View>
-  </TouchableOpacity>
+  <StyledTouchableOpacity onPress={onPress}>
+    <StyledView>
+      <StyledText>{text}</StyledText>
+    </StyledView>
+  </StyledTouchableOpacity>
 );
 
 AddButton.propTypes = {

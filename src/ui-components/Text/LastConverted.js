@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import format from 'date-fns/format';
-import { Text } from './styled';
+import { StyledText } from './styled';
 
 export const LastConverted = ({ date, base, quote, conversionRate }) => (
-  <Text>{`1 ${base} = ${conversionRate} ${quote} as of ${format(date, 'MMM d, yyyy')}`}</Text>
+  <StyledText>{`1 ${base} = ${conversionRate} ${quote} as of ${format(date, 'MMM d, yyyy')}`}</StyledText>
 );
 
 LastConverted.propTypes = {

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableHighlight } from 'react-native';
 
-import { View, Text } from './styled';
+import { StyledView, StyledText } from './styled';
 import Icon from './Icon';
 
 export const ListItem = ({
@@ -16,11 +16,11 @@ export const ListItem = ({
 }) => {
   return (
     <TouchableHighlight onPress={onPress}>
-      <View>
-        <Text>{text}</Text>
+      <StyledView>
+        <StyledText>{text}</StyledText>
         {selected ? <Icon visible={visible} checkmark={checkmark} iconBackground={iconBackground} /> : <Icon />}
         {customIcon}
-      </View>
+      </StyledView>
     </TouchableHighlight>
   );
 };

@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, TouchableHighlight, TextInput, Separator } from './styled';
+import { StyledView, StyledText, StyledTouchableHighlight, StyledTextInput, StyledSeparator } from './styled';
 import { UNDERLAY_COLOR } from '../../theme/Theme';
 
 export const InputWithButton = ({ buttonText, onPress, editable = true, textColor, onRemove, ...props }) => {
   return (
-    <View editable={editable}>
-      <TouchableHighlight onPress={onPress} underlayColor={UNDERLAY_COLOR}>
-        <Text>{buttonText}</Text>
-      </TouchableHighlight>
-      <Separator />
-      <TextInput underlineColorAndroid='transparent' {...props} />
+    <StyledView editable={editable}>
+      <StyledTouchableHighlight onPress={onPress} underlayColor={UNDERLAY_COLOR}>
+        <StyledText>{buttonText}</StyledText>
+      </StyledTouchableHighlight>
+      <StyledSeparator />
+      <StyledTextInput underlineColorAndroid='transparent' {...props} />
       {onRemove && (
-        <TouchableHighlight onPress={onRemove} underlayColor={UNDERLAY_COLOR}>
-          <Text>-</Text>
-        </TouchableHighlight>
+        <StyledTouchableHighlight onPress={onRemove} underlayColor={UNDERLAY_COLOR}>
+          <StyledText>-</StyledText>
+        </StyledTouchableHighlight>
       )}
-    </View>
+    </StyledView>
   );
 };
 

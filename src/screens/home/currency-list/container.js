@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { CurrencyList } from './CurrencyListScreen';
+import { CurrencyList } from './currency-list-screen';
 import { actions } from '../../../actions/currency';
 
 const mapStateToProps = ({ currency }) => ({

@@ -1,3 +1,1 @@
-import LastConverted from './LastConverted';
-
-export { LastConverted };
+export { LastConverted } from './LastConverted';
