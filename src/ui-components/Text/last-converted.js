@@ -8,8 +8,8 @@ export const LastConverted = ({ date, base, quote, conversionRate }) => (
 );
 
 LastConverted.propTypes = {
-  date: PropTypes.object.isRequired,
+  date: PropTypes.object,
   base: PropTypes.string.isRequired,
-  quote: PropTypes.string.isRequired,
-  conversionRate: PropTypes.number.isRequired,
+  quote: PropTypes.string,
+  conversionRate: PropTypes.number,
 };
