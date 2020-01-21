@@ -23,6 +23,7 @@ const mapStateToProps = ({ currency, theme }) => {
 const mapDispatchToProps = {
   getInitialConversion: actions.getInitialConversion,
   onRemoveQuoteCurrency: actions.onRemoveCurrency,
+  onMarkCurrencyAsFavorite: actions.onMarkCurrencyAsFavorite,
 };
 
 export const HomeScreen = connect(

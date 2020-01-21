@@ -2,13 +2,12 @@ import { connect } from 'react-redux';
 import { FavoriteCurrencyList } from './favorite-currency-list-screen';
 import { actions } from '../../../actions/currency';
 
-const mapStateToProps = ({ currency }) => ({
-  baseCurrency: currency.baseCurrency,
+const mapStateToProps = ({ currency: { favoriteCurrencyList } }) => ({
+  favoriteCurrencyList,
 });
 
 const mapDispatchToProps = {
-  changeBaseCurrency: actions.changeBaseCurrency,
-  onAddCurrency: actions.onAddCurrency,
+  onUnMarkCurrencyFromFavorites: actions.onUnMarkCurrencyFromFavorites,
 };
 
 export const FavoriteCurrencyListScreen = connect(

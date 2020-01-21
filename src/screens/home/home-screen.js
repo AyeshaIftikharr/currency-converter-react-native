@@ -25,6 +25,7 @@ export const Home = ({
   alertWithType,
   currencyError,
   onRemoveQuoteCurrency,
+  onMarkCurrencyAsFavorite,
 }) => {
   const [amount, setAmount] = useState(100);
   useEffect(() => {
@@ -75,7 +76,14 @@ export const Home = ({
               editable={false}
               value={isFetching ? '...' : (amount * rates[quoteCurrency]).toFixed(2)}
               onRemove={() => onRemoveQuoteCurrency(quoteCurrency)}
-              onMarkAsFavorite={() => { }}
+              onMarkAsFavorite={() =>
+                onMarkCurrencyAsFavorite({
+                  baseCurrency,
+                  quoteCurrency,
+                  lastConvertedDate,
+                  conversionRate: rates[quoteCurrency],
+                })
+              }
             />
             <LastConverted
               date={lastConvertedDate}
@@ -109,4 +117,5 @@ Home.propTypes = {
   alertWithType: PropTypes.func.isRequired,
   getInitialConversion: PropTypes.func.isRequired,
   onRemoveQuoteCurrency: PropTypes.func.isRequired,
+  onMarkCurrencyAsFavorite: PropTypes.func.isRequired,
 };
