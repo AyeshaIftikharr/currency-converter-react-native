@@ -11,7 +11,7 @@ export const ContainedButton = ({ text, onPress, disabled }) => (
 );
 
 ContainedButton.propTypes = {
+  disabled: PropTypes.bool,
   text: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
-  disabled: PropTypes.bool,
 };

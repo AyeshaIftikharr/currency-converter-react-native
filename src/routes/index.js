@@ -1,6 +1,7 @@
-import { createAppContainer } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { StatusBar } from 'react-native';
+
 import {
   HomeScreen,
   CurrencyListScreen,
@@ -10,28 +11,7 @@ import {
 } from '../screens/home';
 import { LoginScreen } from '../screens/login';
 import { SignupScreen } from '../screens/signup';
-
-const AuthStack = createStackNavigator(
-  {
-    Login: {
-      screen: LoginScreen,
-      navigationOptions: {
-        header: () => null,
-        headerTitle: 'Login',
-      },
-    },
-    Signup: {
-      screen: SignupScreen,
-      navigationOptions: {
-        header: () => null,
-        headerTitle: 'Signup',
-      },
-    },
-  },
-  {
-    headerMode: 'screen',
-  },
-);
+import { ScreenLoader } from '../screens/loader';
 
 const HomeStack = createStackNavigator(
   {
@@ -75,11 +55,8 @@ const CurrencyListStack = createStackNavigator({
   },
 });
 
-const StackNavigator = createStackNavigator(
+const AppStack = createStackNavigator(
   {
-    Login: {
-      screen: AuthStack,
-    },
     Home: {
       screen: HomeStack,
     },
@@ -96,4 +73,37 @@ const StackNavigator = createStackNavigator(
   },
 );
 
-export const Navigator = createAppContainer(StackNavigator);
+const AuthStack = createStackNavigator(
+  {
+    Login: {
+      screen: LoginScreen,
+      navigationOptions: {
+        header: () => null,
+        headerTitle: 'Login',
+      },
+    },
+    Signup: {
+      screen: SignupScreen,
+      navigationOptions: {
+        header: () => null,
+        headerTitle: 'Signup',
+      },
+    },
+  },
+  {
+    headerMode: 'screen',
+  },
+);
+
+export const Navigator = createAppContainer(
+  createSwitchNavigator(
+    {
+      Loading: ScreenLoader,
+      App: AppStack,
+      Auth: AuthStack,
+    },
+    {
+      initialRouteName: 'Loading',
+    },
+  ),
+);

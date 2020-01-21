@@ -15,27 +15,21 @@ function useFormInput(initialValue) {
   };
 }
 
-export const Form = ({ type, navigate }) => {
+export const Form = ({ type, onSubmit }) => {
   const username = useFormInput('');
   const password = useFormInput('');
-
-  const gotoHomeDirectory = () => {
-    setTimeout(() => {
-      navigate('Home');
-    }, 500);
-  };
 
   const isEnabled = username.value && password.value;
   return (
     <StyledContainer>
-      <TextInput placeholder="Username" keyboardType="email-address" {...username} />
-      <TextInput placeholder="Password" secureTextEntry={true} {...password} />
-      <ContainedButton text={type} onPress={gotoHomeDirectory} disabled={!isEnabled} />
+      <TextInput placeholder='Username' keyboardType='email-address' {...username} />
+      <TextInput placeholder='Password' secureTextEntry={true} {...password} />
+      <ContainedButton text={type} onPress={onSubmit} disabled={!isEnabled} />
     </StyledContainer>
   );
 };
 
 Form.propTypes = {
   type: PropTypes.string,
-  navigate: PropTypes.func,
+  onSubmit: PropTypes.func,
 };

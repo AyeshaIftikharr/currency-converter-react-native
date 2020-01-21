@@ -8,9 +8,3 @@ export const changeBaseCurrency = payload => payloadActionCreator(actions.CURREN
 export const onAddCurrency = payload => payloadActionCreator(actions.CURRENCY_QUOTE_CURRENCY_ADD, payload);
 
 export const onRemoveCurrency = payload => payloadActionCreator(actions.CURRENCY_QUOTE_CURRENCY_REMOVE, payload);
-
-export const onMarkCurrencyAsFavorite = payload =>
-  payloadActionCreator(actions.CURRENCY_MARK_CURRENCY_AS_FAVORITE, payload);
-
-export const onUnMarkCurrencyFromFavorites = payload =>
-  payloadActionCreator(actions.CURRENCY_UNMARK_CURRENCY_FROM_FAVORITES, payload);

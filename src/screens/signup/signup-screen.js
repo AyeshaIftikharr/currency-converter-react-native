@@ -7,19 +7,27 @@ import { MainLayout } from '../../ui-components/main-layout';
 import { Logo } from '../../ui-components/logo';
 import { Footer } from '../../ui-components/footer';
 
-export const SignupScreen = ({ navigation: { navigate } }) => {
+export const Signup = ({ onHandleLogin, navigation: { navigate } }) => {
+  const gotoHomeDirectory = () => {
+    setTimeout(() => {
+      navigate('Home');
+    }, 500);
+    onHandleLogin();
+  };
+
   return (
     <MainLayout>
       <StatusBar translucent={false} barStyle='light-content' />
       <Logo />
       <KeyboardAvoidingView behavior='padding'>
-        <Form type='Signup' navigate={navigate} />
+        <Form type='Signup' onSubmit={gotoHomeDirectory} />
       </KeyboardAvoidingView>
       <Footer text='Already have an account?' onPress={() => navigate('Login')} buttonText='Login' />
     </MainLayout>
   );
 };
 
-SignupScreen.propTypes = {
-  navigation: PropTypes.object,
+Signup.propTypes = {
+  navigation: PropTypes.object.isRequired,
+  onHandleLogin: PropTypes.func.isRequired,
 };

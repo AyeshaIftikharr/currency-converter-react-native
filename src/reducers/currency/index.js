@@ -1,9 +1,9 @@
 import { types } from '../../actions/currency';
+import { types as AuthTypes } from '../../actions/auth';
 
 const initialState = {
   baseCurrency: 'USD',
   quoteCurrencies: ['GBP'],
-  favoriteCurrencyList: [],
   conversions: {},
   error: null,
 };
@@ -62,17 +62,9 @@ export const currencyReducer = (state = initialState, action) => {
       };
     case types.CURRENCY_CONVERSION_RATES_FETCH_FAILURE:
       return { ...state, error: action.error };
-    case types.CURRENCY_MARK_CURRENCY_AS_FAVORITE:
+    case AuthTypes.AUTH_LOGOUT:
       return {
-        ...state,
-        favoriteCurrencyList: [...state.favoriteCurrencyList, action.payload],
-      };
-    case types.CURRENCY_UNMARK_CURRENCY_FROM_FAVORITES:
-      return {
-        ...state,
-        favoriteCurrencyList: state.favoriteCurrencyList.filter(
-          item => item.quoteCurrency !== action.payload.quoteCurrency,
-        ),
+        ...initialState,
       };
     default:
       return state;

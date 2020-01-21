@@ -22,18 +22,18 @@ export const InputWithButton = ({
         <StyledText>{buttonText}</StyledText>
       </StyledTouchableHighlight>
       <StyledSeparator />
-      <StyledTextInput underlineColorAndroid="transparent" {...props} />
+      <StyledTextInput underlineColorAndroid='transparent' {...props} />
       {onMarkAsFavorite && (
         <StyledTouchableHighlight onPress={onMarkAsFavorite} underlayColor={UNDERLAY_COLOR}>
           <StyledIcon>
-            <Icon name="heart" size={ICON_SIZE} color={BLUE} />
+            <Icon name='heart' size={ICON_SIZE} color={BLUE} />
           </StyledIcon>
         </StyledTouchableHighlight>
       )}
       {onRemove && (
         <StyledTouchableHighlight onPress={onRemove} underlayColor={UNDERLAY_COLOR}>
           <StyledIcon>
-            <Icon name="trash" size={ICON_SIZE} color={BLUE} />
+            <Icon name='trash' size={ICON_SIZE} color={BLUE} />
           </StyledIcon>
         </StyledTouchableHighlight>
       )}
@@ -42,9 +42,9 @@ export const InputWithButton = ({
 };
 
 InputWithButton.propTypes = {
+  editable: PropTypes.bool,
   buttonText: PropTypes.string.isRequired,
   onPress: PropTypes.func,
-  editable: PropTypes.bool,
   onRemove: PropTypes.func,
   onMarkAsFavorite: PropTypes.func,
 };

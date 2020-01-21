@@ -3,6 +3,7 @@ import { Home } from './home-screen';
 import { connectAlert } from '../../ui-components/alert';
 // actions
 import { actions } from '../../actions/currency';
+import { actions as favoriteCurrencyActions } from '../../actions/favorite-currency';
 
 const mapStateToProps = ({ currency, theme }) => {
   const { baseCurrency, quoteCurrencies } = currency;
@@ -23,7 +24,7 @@ const mapStateToProps = ({ currency, theme }) => {
 const mapDispatchToProps = {
   getInitialConversion: actions.getInitialConversion,
   onRemoveQuoteCurrency: actions.onRemoveCurrency,
-  onMarkCurrencyAsFavorite: actions.onMarkCurrencyAsFavorite,
+  onMarkCurrencyAsFavorite: favoriteCurrencyActions.onMarkCurrencyAsFavorite,
 };
 
 export const HomeScreen = connect(

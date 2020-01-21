@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { StatusBar, KeyboardAvoidingView } from 'react-native';
+import format from 'date-fns/format';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -80,7 +81,7 @@ export const Home = ({
                 onMarkCurrencyAsFavorite({
                   baseCurrency,
                   quoteCurrency,
-                  lastConvertedDate,
+                  lastConvertedDate: format(lastConvertedDate, 'MMM d, yyyy'),
                   conversionRate: rates[quoteCurrency],
                 })
               }

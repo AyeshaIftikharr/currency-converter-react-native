@@ -7,7 +7,7 @@ import { connectAlert } from '../../../ui-components/alert';
 
 import { ICON_COLOR, ICON_SIZE } from '../../../theme';
 
-const Options = ({ navigation, alertWithType }) => {
+const OptionsList = ({ navigation, alertWithType, handleLogout }) => {
   const handlePressThemes = () => navigation.navigate('Themes');
 
   const handlePressSite = () => {
@@ -16,28 +16,39 @@ const Options = ({ navigation, alertWithType }) => {
     );
   };
 
+  const onHandleLogout = () => {
+    handleLogout();
+    navigation.navigate('Auth');
+  };
+
   return (
     <ScrollView>
-      <StatusBar translucent={false} barStyle='default' />
+      <StatusBar translucent={false} barStyle="default" />
       <ListItem
-        text='Themes'
+        text="Themes"
         onPress={handlePressThemes}
-        customIcon={<Icon name='chevron-right' size={ICON_SIZE} color={ICON_COLOR} />}
+        customIcon={<Icon name="chevron-right" size={ICON_SIZE} color={ICON_COLOR} />}
       />
       <Separator />
       <ListItem
-        text='Fixer.io'
+        text="Fixer.io"
         onPress={handlePressSite}
-        customIcon={<Icon name='link' size={ICON_SIZE} color={ICON_COLOR} />}
+        customIcon={<Icon name="link" size={ICON_SIZE} color={ICON_COLOR} />}
+      />
+      <ListItem
+        text="Logout"
+        onPress={onHandleLogout}
+        customIcon={<Icon name="reply" size={ICON_SIZE} color={ICON_COLOR} />}
       />
       <Separator />
     </ScrollView>
   );
 };
 
-Options.propTypes = {
+OptionsList.propTypes = {
   navigation: PropTypes.object.isRequired,
   alertWithType: PropTypes.func.isRequired,
+  handleLogout: PropTypes.func.isRequired,
 };
 
-export const OptionsScreen = connectAlert(Options);
+export const Options = connectAlert(OptionsList);
