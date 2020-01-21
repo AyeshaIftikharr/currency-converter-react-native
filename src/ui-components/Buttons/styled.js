@@ -17,7 +17,22 @@ export const StyledImage = styled(Image)`
 
 export const StyledText = styled(Text)`
   color: ${({ theme }) => theme.white};
-  font-size: 14px;
-  font-weight: 300;
-  padding: 20px 0 20px 0;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 20px 5px 20px 0;
+`;
+
+export const StyledContainedTouchableOpacity = styled(TouchableOpacity)`
+  align-items: center;
+  background-color: ${({ theme, disabled }) => (disabled ? theme.disabledBackground : theme.darkButtonBackground)};
+  border-radius: 5px;
+  width: 335px;
+  margin-top: 10px;
+`;
+
+export const StyledBoldText = styled(Text)`
+  color: ${({ theme }) => theme.white};
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
 `;

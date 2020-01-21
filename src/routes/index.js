@@ -2,6 +2,30 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { StatusBar } from 'react-native';
 import { HomeScreen, CurrencyListScreen, OptionsScreen, ThemesScreen } from '../screens/home';
+import { LoginScreen } from '../screens/login';
+import { SignupScreen } from '../screens/signup';
+
+const AuthStack = createStackNavigator(
+  {
+    Login: {
+      screen: LoginScreen,
+      navigationOptions: {
+        header: () => null,
+        headerTitle: 'Login',
+      },
+    },
+    Signup: {
+      screen: SignupScreen,
+      navigationOptions: {
+        header: () => null,
+        headerTitle: 'Signup',
+      },
+    },
+  },
+  {
+    headerMode: 'screen',
+  },
+);
 
 const HomeStack = createStackNavigator(
   {
@@ -24,6 +48,12 @@ const HomeStack = createStackNavigator(
         headerTitle: 'Themes',
       },
     },
+    FavoriteCurrencyList: {
+      screen: ThemesScreen,
+      navigationOptions: {
+        headerTitle: 'Favorites',
+      },
+    },
   },
   {
     headerMode: 'screen',
@@ -41,6 +71,9 @@ const CurrencyListStack = createStackNavigator({
 
 const StackNavigator = createStackNavigator(
   {
+    Login: {
+      screen: AuthStack,
+    },
     Home: {
       screen: HomeStack,
     },

@@ -6,6 +6,8 @@ const THEME = {
   inputText: colors.INPUT_TEXT,
   lightGrey: colors.LIGHT_GREY,
   darkText: colors.DARK_TEXT,
+  darkButtonBackground: colors.DARK_BLUE,
+  disabledBackground: colors.DISABLED_BUTTON,
 };
 
 export const ICON_SIZE = 20;

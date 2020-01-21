@@ -1,4 +1,5 @@
 import { ClearButton } from './clear-button';
-import { AddButton } from './add-button';
+import { CustomButton } from './custom-button';
+import { ContainedButton } from './contained-button';
 
-export { AddButton, ClearButton };
+export { CustomButton, ClearButton, ContainedButton };
