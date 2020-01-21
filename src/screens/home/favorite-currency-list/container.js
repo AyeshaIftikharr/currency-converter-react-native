@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { CurrencyList } from './favorite-currency-list-screen';
+import { FavoriteCurrencyList } from './favorite-currency-list-screen';
 import { actions } from '../../../actions/currency';
 
 const mapStateToProps = ({ currency }) => ({
@@ -11,7 +11,7 @@ const mapDispatchToProps = {
   onAddCurrency: actions.onAddCurrency,
 };
 
-export const CurrencyListScreen = connect(
+export const FavoriteCurrencyListScreen = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(CurrencyList);
+)(FavoriteCurrencyList);

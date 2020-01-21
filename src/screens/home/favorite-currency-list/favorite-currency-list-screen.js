@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FlatList, StatusBar } from 'react-native';
-// components
-import { ListItem, Separator } from '../../../ui-components/list';
-import CURRENCIES from '../../../static/data/currency-list';
-// styles
+
+import { FavoriteListItem, Separator } from '../../../ui-components/list';
 import { StyledView } from './styled';
 
 export const FavoriteCurrencyList = ({ navigation, baseCurrency, changeBaseCurrency, onAddCurrency }) => {
-  const handlePress = currency => {
+  const onUnMarkFromFavorites = currency => {
     const { type } = navigation.state.params;
     if (type === 'base') {
       changeBaseCurrency(currency);
@@ -18,18 +16,13 @@ export const FavoriteCurrencyList = ({ navigation, baseCurrency, changeBaseCurre
     navigation.goBack(null);
   };
 
+  const data = [{ base: 'bla', conversionRate: '0.333', quote: 'bla bla', date: '01-01-2009' }];
   return (
     <StyledView>
-      <StatusBar translucent={false} barStyle='light-content' />
+      <StatusBar translucent={false} barStyle="light-content" />
       <FlatList
-        data={CURRENCIES}
-        renderItem={({ item }) => (
-          <ListItem
-            text={item}
-            selected={item === baseCurrency && navigation.state.params.type !== 'quote'}
-            onPress={() => handlePress(item)}
-          />
-        )}
+        data={data}
+        renderItem={({ item }) => <FavoriteListItem item={item} onPress={() => onUnMarkFromFavorites(item)} />}
         keyExtractor={item => item}
         ItemSeparatorComponent={Separator}
       />
@@ -37,7 +30,7 @@ export const FavoriteCurrencyList = ({ navigation, baseCurrency, changeBaseCurre
   );
 };
 
-CurrencyList.propTypes = {
+FavoriteCurrencyList.propTypes = {
   baseCurrency: PropTypes.string.isRequired,
   navigation: PropTypes.object.isRequired,
   onAddCurrency: PropTypes.func.isRequired,

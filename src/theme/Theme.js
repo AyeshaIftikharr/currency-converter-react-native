@@ -11,6 +11,8 @@ const THEME = {
 };
 
 export const ICON_SIZE = 20;
+export const INPUT_HEIGHT = 48;
+export const BORDER_RADIUS = 4;
 
 export const THEME_LOOKUP = {
   BLUE: {

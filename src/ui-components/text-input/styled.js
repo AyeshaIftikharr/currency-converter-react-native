@@ -15,15 +15,6 @@ export const StyledView = styled(View)`
   width: 90%;
 `;
 
-export const StyledTouchableHighlight = styled(TouchableHighlight)`
-  align-items: center;
-  background-color: ${({ theme }) => theme.white};
-  border-bottom-left-radius: ${BORDER_RADIUS}px;
-  border-top-left-radius: ${BORDER_RADIUS}px;
-  height: ${INPUT_HEIGHT}px;
-  justify-content: center;
-`;
-
 export const StyledText = styled(Text)`
   color: ${({ theme }) => theme.primaryColor};
   font-size: 20px;

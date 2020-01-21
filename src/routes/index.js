@@ -1,7 +1,13 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { StatusBar } from 'react-native';
-import { HomeScreen, CurrencyListScreen, OptionsScreen, ThemesScreen } from '../screens/home';
+import {
+  HomeScreen,
+  CurrencyListScreen,
+  OptionsScreen,
+  ThemesScreen,
+  FavoriteCurrencyListScreen,
+} from '../screens/home';
 import { LoginScreen } from '../screens/login';
 import { SignupScreen } from '../screens/signup';
 
@@ -49,10 +55,10 @@ const HomeStack = createStackNavigator(
       },
     },
     FavoriteCurrencyList: {
-      screen: ThemesScreen,
-      navigationOptions: {
-        headerTitle: 'Favorites',
-      },
+      screen: FavoriteCurrencyListScreen,
+      navigationOptions: ({ navigation }) => ({
+        headerTitle: navigation.state.params.title,
+      }),
     },
   },
   {

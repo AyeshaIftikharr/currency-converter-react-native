@@ -50,7 +50,7 @@ export const Home = ({
   };
 
   const onViewFavoriteCurrencies = () => {
-    navigate('FavoriteCurrencyList');
+    navigate('FavoriteCurrencyList', { title: `Favorites` });
   };
 
   const handleOptionsPress = () => navigate('Options');
@@ -60,7 +60,7 @@ export const Home = ({
       <StatusBar translucent={false} barStyle='light-content' />
       <Header onPress={handleOptionsPress} />
       <KeyboardAvoidingView behavior='padding'>
-        <Logo hideLogo />
+        <Logo />
         <InputWithButton
           buttonText={baseCurrency}
           onPress={handlePressBaseCurrency}
@@ -75,6 +75,7 @@ export const Home = ({
               editable={false}
               value={isFetching ? '...' : (amount * rates[quoteCurrency]).toFixed(2)}
               onRemove={() => onRemoveQuoteCurrency(quoteCurrency)}
+              onMarkAsFavorite={() => { }}
             />
             <LastConverted
               date={lastConvertedDate}
