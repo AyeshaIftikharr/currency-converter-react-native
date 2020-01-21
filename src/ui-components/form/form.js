@@ -23,13 +23,13 @@ export const Form = ({ type, onSubmit }) => {
   return (
     <StyledContainer>
       <TextInput placeholder='Username' keyboardType='email-address' {...username} />
-      <TextInput placeholder='Password' secureTextEntry={true} {...password} />
+      <TextInput placeholder='Password' secureTextEntry {...password} />
       <ContainedButton text={type} onPress={onSubmit} disabled={!isEnabled} />
     </StyledContainer>
   );
 };
 
 Form.propTypes = {
-  type: PropTypes.string,
-  onSubmit: PropTypes.func,
+  type: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };

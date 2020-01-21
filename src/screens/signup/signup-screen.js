@@ -7,12 +7,12 @@ import { MainLayout } from '../../ui-components/main-layout';
 import { Logo } from '../../ui-components/logo';
 import { Footer } from '../../ui-components/footer';
 
-export const Signup = ({ onHandleLogin, navigation: { navigate } }) => {
+export const Signup = ({ handleSignup, navigation: { navigate } }) => {
   const gotoHomeDirectory = () => {
     setTimeout(() => {
       navigate('Home');
+      handleSignup();
     }, 500);
-    onHandleLogin();
   };
 
   return (
@@ -29,5 +29,5 @@ export const Signup = ({ onHandleLogin, navigation: { navigate } }) => {
 
 Signup.propTypes = {
   navigation: PropTypes.object.isRequired,
-  onHandleLogin: PropTypes.func.isRequired,
+  handleSignup: PropTypes.func.isRequired,
 };

@@ -7,7 +7,7 @@ const mapStateToProps = ({ auth: { isLoggedIn } }) => ({
 });
 
 const mapDispatchToProps = {
-  onHandleLogin: actions.onLogin,
+  handleLogin: actions.onLogin,
 };
 
 export const LoginScreen = connect(

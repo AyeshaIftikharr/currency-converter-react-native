@@ -14,4 +14,5 @@ export const CustomButton = ({ text, onPress, icon = null }) => (
 CustomButton.propTypes = {
   text: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
+  icon: PropTypes.element,
 };

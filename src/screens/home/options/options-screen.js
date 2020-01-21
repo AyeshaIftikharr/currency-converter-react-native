@@ -23,22 +23,22 @@ const OptionsList = ({ navigation, alertWithType, handleLogout }) => {
 
   return (
     <ScrollView>
-      <StatusBar translucent={false} barStyle="default" />
+      <StatusBar translucent={false} barStyle='default' />
       <ListItem
-        text="Themes"
+        text='Themes'
         onPress={handlePressThemes}
-        customIcon={<Icon name="chevron-right" size={ICON_SIZE} color={ICON_COLOR} />}
+        customIcon={<Icon name='chevron-right' size={ICON_SIZE} color={ICON_COLOR} />}
       />
       <Separator />
       <ListItem
-        text="Fixer.io"
+        text='Fixer.io'
         onPress={handlePressSite}
-        customIcon={<Icon name="link" size={ICON_SIZE} color={ICON_COLOR} />}
+        customIcon={<Icon name='link' size={ICON_SIZE} color={ICON_COLOR} />}
       />
       <ListItem
-        text="Logout"
+        text='Logout'
         onPress={onHandleLogout}
-        customIcon={<Icon name="reply" size={ICON_SIZE} color={ICON_COLOR} />}
+        customIcon={<Icon name='reply' size={ICON_SIZE} color={ICON_COLOR} />}
       />
       <Separator />
     </ScrollView>

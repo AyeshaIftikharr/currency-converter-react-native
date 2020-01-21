@@ -3,7 +3,7 @@ import { Signup } from './signup-screen';
 import { actions } from '../../actions/auth';
 
 const mapDispatchToProps = {
-  onHandleLogin: actions.onLogin,
+  handleSignup: actions.onLogin,
 };
 
 export const SignupScreen = connect(

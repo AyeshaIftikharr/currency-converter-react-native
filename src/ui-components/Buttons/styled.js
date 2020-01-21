@@ -24,7 +24,7 @@ export const StyledText = styled(Text)`
 
 export const StyledContainedTouchableOpacity = styled(TouchableOpacity)`
   align-items: center;
-  background-color: ${({ theme, disabled }) => (disabled ? theme.disabledBackground : theme.darkButtonBackground)};
+  background-color: ${({ theme, disabled }) => (disabled ? theme.disabledBackground : theme.darkBackground)};
   border-radius: 5px;
   width: 335px;
   margin-top: 10px;
