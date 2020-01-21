@@ -63,4 +63,4 @@ buck-out/
 # .vscode
 
 # Pods
-Podfile.lock
+/ios/Podfile.lock
