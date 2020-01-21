@@ -2,7 +2,7 @@ import * as actions from './types';
 import { payloadActionCreator } from '../../utils';
 
 export const onMarkCurrencyAsFavorite = payload =>
-  payloadActionCreator(actions.CURRENCY_MARK_CURRENCY_AS_FAVORITE, payload);
+  payloadActionCreator(actions.FAVORITE_CURRENCY_MARK_AS_FAVORITE, payload);
 
 export const onUnMarkCurrencyFromFavorites = payload =>
-  payloadActionCreator(actions.CURRENCY_UNMARK_CURRENCY_FROM_FAVORITES, payload);
+  payloadActionCreator(actions.FAVORITE_CURRENCY_UNMARK_FROM_FAVORITES, payload);

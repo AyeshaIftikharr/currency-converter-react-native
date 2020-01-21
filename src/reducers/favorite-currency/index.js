@@ -7,12 +7,12 @@ const initialState = {
 
 export const favoriteCurrencyReducer = (state = initialState, action) => {
   switch (action.type) {
-    case types.CURRENCY_MARK_CURRENCY_AS_FAVORITE:
+    case types.FAVORITE_CURRENCY_MARK_AS_FAVORITE:
       return {
         ...state,
         favoriteCurrencyList: [...state.favoriteCurrencyList, action.payload],
       };
-    case types.CURRENCY_UNMARK_CURRENCY_FROM_FAVORITES:
+    case types.FAVORITE_CURRENCY_UNMARK_FROM_FAVORITES:
       return {
         ...state,
         favoriteCurrencyList: state.favoriteCurrencyList.filter(
