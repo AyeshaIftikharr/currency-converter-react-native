@@ -7,18 +7,11 @@ import { persistedReducer } from '../reducers';
 import { rootSaga } from '../sagas';
 
 const sagaMiddleware = createSagaMiddleware();
-// const middleware = [sagaMiddleware];
-// if (process.env.NODE_ENV === 'development') {
-//   middleware.push(logger);
-// }
 
 const enhancer = compose(
   applyMiddleware(sagaMiddleware),
-  window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f, // it can be
+  window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f,
 );
-
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-// export default createStore(reducers, composeEnhancers(applyMiddleware(...middleware)));
 
 const store = createStore(persistedReducer, enhancer);
 
