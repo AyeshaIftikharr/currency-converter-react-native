@@ -46,3 +46,9 @@ Go through this course: https://learn.handlebarlabs.com/p/react-native-basics-bu
 - Configure Storybooks for RN (knobs, actions, folder/file structuring)
 - Write stories for all UI components
 - Setup structural testing with StoryShots
+
+### To Run this Project
+- npx react-native link (for react native icons)
+- run cd ios && pod install
+- run yarn ios
+
