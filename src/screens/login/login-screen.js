@@ -22,7 +22,7 @@ export const Login = ({ handleLogin, navigation: { navigate } }) => {
       <KeyboardAvoidingView behavior='padding'>
         <Form type='Login' onSubmit={gotoHomeDirectory} />
       </KeyboardAvoidingView>
-      <Footer text="Don't have an account yet?" onPress={() => navigate('Signup')} buttonText='Signup' />
+      <Footer text={`Don't have an account yet?`} onPress={() => navigate('Signup')} buttonText='Signup' />
     </MainLayout>
   );
 };

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { StatusBar, KeyboardAvoidingView } from 'react-native';
-import format from 'date-fns/format';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -59,15 +58,15 @@ export const Home = ({
 
   return (
     <MainLayout>
-      <StatusBar translucent={false} barStyle='light-content' />
+      <StatusBar translucent={false} barStyle="light-content" />
       <Header onPress={handleOptionsPress} />
-      <KeyboardAvoidingView behavior='padding'>
+      <KeyboardAvoidingView behavior="padding">
         <Logo />
         <InputWithButton
           buttonText={baseCurrency}
           onPress={handlePressBaseCurrency}
           value={amount.toString()}
-          keyboardType='numeric'
+          keyboardType="numeric"
           onChangeText={text => setAmount(text)}
         />
         {quoteCurrencies.map(quoteCurrency => (
@@ -81,7 +80,7 @@ export const Home = ({
                 onMarkCurrencyAsFavorite({
                   baseCurrency,
                   quoteCurrency,
-                  lastConvertedDate: format(lastConvertedDate, 'MMM d, yyyy'),
+                  lastConvertedDate,
                   conversionRate: rates[quoteCurrency],
                 })
               }
@@ -95,11 +94,11 @@ export const Home = ({
           </React.Fragment>
         ))}
         <StyledButtonContainer>
-          <CustomButton text='Add Currency' onPress={onAddQuoteCurrency} />
+          <CustomButton text="Add Currency" onPress={onAddQuoteCurrency} />
           <CustomButton
-            text='View Favorites'
+            text="View Favorites"
             onPress={onViewFavoriteCurrencies}
-            icon={<Icon name='heart' size={ICON_SIZE} color={WHITE} />}
+            icon={<Icon name="heart" size={ICON_SIZE} color={WHITE} />}
           />
         </StyledButtonContainer>
       </KeyboardAvoidingView>
@@ -113,7 +112,7 @@ Home.propTypes = {
   currencyError: PropTypes.string,
   quoteCurrencies: PropTypes.array.isRequired,
   navigation: PropTypes.object.isRequired,
-  lastConvertedDate: PropTypes.object.isRequired,
+  lastConvertedDate: PropTypes.string.isRequired,
   rates: PropTypes.object.isRequired,
   alertWithType: PropTypes.func.isRequired,
   getInitialConversion: PropTypes.func.isRequired,

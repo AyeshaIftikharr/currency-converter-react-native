@@ -5,6 +5,8 @@ import { connectAlert } from '../../ui-components/alert';
 import { actions } from '../../actions/currency';
 import { actions as favoriteCurrencyActions } from '../../actions/favorite-currency';
 
+import { getFormattedDate } from '../../selectors/home';
+
 const mapStateToProps = ({ currency, theme }) => {
   const { baseCurrency, quoteCurrencies } = currency;
   const conversionSelector = currency.conversions[baseCurrency] || {};
@@ -14,7 +16,7 @@ const mapStateToProps = ({ currency, theme }) => {
     baseCurrency,
     quoteCurrencies,
     rates,
-    lastConvertedDate: conversionSelector.date ? new Date(conversionSelector.date) : new Date(),
+    lastConvertedDate: getFormattedDate(conversionSelector.date ? new Date(conversionSelector.date) : new Date()),
     isFetching: conversionSelector.isFetching,
     primaryColor: theme.primaryColor,
     currencyError: currency.error,
