@@ -9,7 +9,8 @@
     "test": "jest",
     "lint": "eslint *.js src/ --no-ignore .eslintrc.js",
     "lint:watch": "yarn lint --watch",
-    "devtools": "react-devtools"
+    "react-devtools": "react-devtools",
+    "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.7.1",
