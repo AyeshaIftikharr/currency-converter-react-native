@@ -7,11 +7,11 @@ import { StyledView } from './styled';
 
 export const FavoriteCurrencyList = ({ favoriteCurrencyList, onUnMarkCurrencyFromFavorites }) => (
   <StyledView>
-    <StatusBar translucent={false} barStyle='light-content' />
+    <StatusBar translucent={false} barStyle="light-content" />
     <FlatList
       data={favoriteCurrencyList}
       renderItem={({ item }) => <FavoriteListItem item={item} onPress={() => onUnMarkCurrencyFromFavorites(item)} />}
-      keyExtractor={item => item.conversionRate}
+      keyExtractor={item => item.conversionRate.toString()}
       ItemSeparatorComponent={Separator}
     />
   </StyledView>
