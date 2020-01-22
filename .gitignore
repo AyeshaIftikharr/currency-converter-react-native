@@ -61,3 +61,6 @@ buck-out/
 
 # Workspace settings
 # .vscode
+
+# Pods
+/ios/Podfile.lock

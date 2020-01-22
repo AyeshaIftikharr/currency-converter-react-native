@@ -7,13 +7,18 @@ import { connectAlert } from '../../../ui-components/alert';
 
 import { ICON_COLOR, ICON_SIZE } from '../../../theme';
 
-const Options = ({ navigation, alertWithType }) => {
+const OptionsList = ({ navigation, alertWithType, handleLogout }) => {
   const handlePressThemes = () => navigation.navigate('Themes');
 
   const handlePressSite = () => {
     Linking.openURL('http://handlebarlabs.com').catch(() =>
       alertWithType('error', 'Sorry!', "Fixer.io can't be opened right now."),
     );
+  };
+
+  const onHandleLogout = () => {
+    handleLogout();
+    navigation.navigate('Auth');
   };
 
   return (
@@ -30,14 +35,20 @@ const Options = ({ navigation, alertWithType }) => {
         onPress={handlePressSite}
         customIcon={<Icon name='link' size={ICON_SIZE} color={ICON_COLOR} />}
       />
+      <ListItem
+        text='Logout'
+        onPress={onHandleLogout}
+        customIcon={<Icon name='reply' size={ICON_SIZE} color={ICON_COLOR} />}
+      />
       <Separator />
     </ScrollView>
   );
 };
 
-Options.propTypes = {
+OptionsList.propTypes = {
   navigation: PropTypes.object.isRequired,
   alertWithType: PropTypes.func.isRequired,
+  handleLogout: PropTypes.func.isRequired,
 };
 
-export const OptionsScreen = connectAlert(Options);
+export const Options = connectAlert(OptionsList);

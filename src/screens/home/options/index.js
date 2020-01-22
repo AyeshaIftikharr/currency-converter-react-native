@@ -1,2 +1,2 @@
-export { OptionsScreen } from './options-screen';
+export { OptionsScreen } from './container';
 export { ThemesScreen } from './themes';

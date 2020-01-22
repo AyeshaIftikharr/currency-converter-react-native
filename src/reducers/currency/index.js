@@ -1,4 +1,5 @@
 import { types } from '../../actions/currency';
+import { types as AuthTypes } from '../../actions/auth';
 
 const initialState = {
   baseCurrency: 'USD',
@@ -61,6 +62,10 @@ export const currencyReducer = (state = initialState, action) => {
       };
     case types.CURRENCY_CONVERSION_RATES_FETCH_FAILURE:
       return { ...state, error: action.error };
+    case AuthTypes.AUTH_LOGOUT:
+      return {
+        ...initialState,
+      };
     default:
       return state;
   }

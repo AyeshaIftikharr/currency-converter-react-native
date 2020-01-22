@@ -1,4 +1,4 @@
-export default [
+export const CURRENCIES = [
   'AUD',
   'BGN',
   'BRL',

@@ -6,9 +6,13 @@ const THEME = {
   inputText: colors.INPUT_TEXT,
   lightGrey: colors.LIGHT_GREY,
   darkText: colors.DARK_TEXT,
+  darkBackground: colors.DARK_BLUE,
+  disabledBackground: colors.DISABLED_BUTTON,
 };
 
 export const ICON_SIZE = 20;
+export const INPUT_HEIGHT = 48;
+export const BORDER_RADIUS = 4;
 
 export const THEME_LOOKUP = {
   BLUE: {

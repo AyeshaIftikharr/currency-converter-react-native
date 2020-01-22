@@ -11,3 +11,5 @@ export const BORDER = '#E2E2E2';
 export const INPUT_TEXT = '#797979';
 export const LIGHT_GREY = '#F0F0F0';
 export const DARK_TEXT = '#343434';
+export const DARK_BLUE = '#2C414A';
+export const DISABLED_BUTTON = '#7C9EAD';

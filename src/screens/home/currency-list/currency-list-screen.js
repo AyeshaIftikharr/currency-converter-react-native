@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FlatList, StatusBar } from 'react-native';
 // components
 import { ListItem, Separator } from '../../../ui-components/list';
-import CURRENCIES from '../../../static/data/currency-list';
+import { CURRENCIES } from '../../../static/data/currency-list';
 // styles
 import { StyledView } from './styled';
 
