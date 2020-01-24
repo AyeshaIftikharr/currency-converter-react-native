@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { StyledView, StyledText } from './styled';
-import { StyledIcon, StyledIconView, StyledTouchableHighlight } from '../common';
-import { ICON_SIZE, BLUE, UNDERLAY_COLOR } from '../../theme';
+import { StyledView, StyledText } from '../../../ui-components/list-item/styled';
+import { StyledIcon, StyledIconView, StyledTouchableHighlight } from '../../../ui-components/common';
+import { ICON_SIZE, BLUE, UNDERLAY_COLOR } from '../../../theme';
 
 export const FavoriteListItem = ({ item, onPress }) => {
   const { baseCurrency, conversionRate, quoteCurrency, lastConvertedDate } = item;
@@ -12,7 +12,7 @@ export const FavoriteListItem = ({ item, onPress }) => {
       <StyledText>{`1 ${baseCurrency} = ${conversionRate} ${quoteCurrency} as of ${lastConvertedDate}`}</StyledText>
       <StyledTouchableHighlight onPress={onPress} underlayColor={UNDERLAY_COLOR}>
         <StyledIconView>
-          <StyledIcon name='heart-o' size={ICON_SIZE + 5} color={BLUE} />
+          <StyledIcon name="heart-o" size={ICON_SIZE + 5} color={BLUE} />
         </StyledIconView>
       </StyledTouchableHighlight>
     </StyledView>

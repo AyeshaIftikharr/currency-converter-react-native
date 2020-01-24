@@ -14,15 +14,15 @@ export const ListItem = ({
   customIcon = null,
   iconBackground,
 }) => {
-  return (
-    <TouchableHighlight onPress={onPress}>
-      <StyledView>
-        <StyledText>{text}</StyledText>
-        {selected ? <Icon visible={visible} checkmark={checkmark} iconBackground={iconBackground} /> : <Icon />}
-        {customIcon}
-      </StyledView>
-    </TouchableHighlight>
+  const listItem = (
+    <StyledView>
+      <StyledText>{text}</StyledText>
+      {selected ? <Icon visible={visible} checkmark={checkmark} iconBackground={iconBackground} /> : <Icon />}
+      {customIcon}
+    </StyledView>
   );
+
+  return onPress ? <TouchableHighlight onPress={onPress}>{listItem}</TouchableHighlight> : listItem;
 };
 
 ListItem.propTypes = {

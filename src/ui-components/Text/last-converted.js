@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyledText } from './styled';
+import { Text } from './text';
 
 export const LastConverted = ({ date, base, quote, conversionRate }) => (
-  <StyledText>{`1 ${base} = ${conversionRate} ${quote} as of ${date}`}</StyledText>
+  <Text>{`1 ${base} = ${conversionRate} ${quote} as of ${date}`}</Text>
 );
 
 LastConverted.propTypes = {
