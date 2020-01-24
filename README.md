@@ -1,4 +1,4 @@
-## react-native-currency-converter
+## React Native - Currency Converter
 
 ### React Native Basics: Build a Currency Converter
 Go through this course: https://learn.handlebarlabs.com/p/react-native-basics-build-a-currency-converter/
