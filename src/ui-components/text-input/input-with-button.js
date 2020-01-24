@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
-
 import { StyledView, StyledText, StyledTextInput, StyledSeparator } from './styled';
-import { StyledIcon, StyledTouchableHighlight } from '../common';
-import { UNDERLAY_COLOR, ICON_SIZE, BLUE } from '../../theme';
+import { StyledIcon, StyledIconView, StyledTouchableHighlight } from '../common';
+import { UNDERLAY_COLOR, ICON_SIZE } from '../../theme';
 
 export const InputWithButton = ({
   buttonText,
@@ -25,16 +23,16 @@ export const InputWithButton = ({
       <StyledTextInput underlineColorAndroid='transparent' {...props} />
       {onMarkAsFavorite && (
         <StyledTouchableHighlight onPress={onMarkAsFavorite} underlayColor={UNDERLAY_COLOR}>
-          <StyledIcon>
-            <Icon name='heart' size={ICON_SIZE} color={BLUE} />
-          </StyledIcon>
+          <StyledIconView>
+            <StyledIcon name='heart' size={ICON_SIZE} />
+          </StyledIconView>
         </StyledTouchableHighlight>
       )}
       {onRemove && (
         <StyledTouchableHighlight onPress={onRemove} underlayColor={UNDERLAY_COLOR}>
-          <StyledIcon>
-            <Icon name='trash' size={ICON_SIZE} color={BLUE} />
-          </StyledIcon>
+          <StyledIconView>
+            <StyledIcon name='trash' size={ICON_SIZE} />
+          </StyledIconView>
         </StyledTouchableHighlight>
       )}
     </StyledView>

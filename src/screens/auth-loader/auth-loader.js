@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { View, ActivityIndicator } from 'react-native';
 
-export const ScreenLoader = ({ navigation: { navigate }, isLoggedIn }) => {
+export const AuthLoadingScreen = ({ navigation: { navigate }, isLoggedIn }) => {
   useEffect(() => {
     if (isLoggedIn) {
       navigate('App');
@@ -19,7 +19,7 @@ export const ScreenLoader = ({ navigation: { navigate }, isLoggedIn }) => {
   );
 };
 
-ScreenLoader.propTypes = {
+AuthLoadingScreen.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,
   navigation: PropTypes.object.isRequired,
 };

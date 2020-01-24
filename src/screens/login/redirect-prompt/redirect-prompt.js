@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TouchableOpacity } from 'react-native';
 import { StyledView, StyledBoldText, StyledText } from './styled';
 
-export const Footer = ({ text, buttonText, onPress }) => (
+export const RedirectPrompt = ({ text, buttonText, onPress }) => (
   <StyledView>
     <StyledText>{text}</StyledText>
     <TouchableOpacity onPress={onPress}>
@@ -12,7 +12,7 @@ export const Footer = ({ text, buttonText, onPress }) => (
   </StyledView>
 );
 
-Footer.propTypes = {
+RedirectPrompt.propTypes = {
   text: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,

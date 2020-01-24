@@ -6,7 +6,7 @@ import { StyledView, StyledImage, StyledTouchableOpacity } from './styled';
 export const Header = ({ onPress }) => (
   <StyledView>
     <StyledTouchableOpacity onPress={onPress}>
-      <StyledImage resizeMode='contain' source={require('./images/gear.png')} />
+      <StyledImage resizeMode="contain" source={require('../../../static/images/gear.png')} />
     </StyledTouchableOpacity>
   </StyledView>
 );

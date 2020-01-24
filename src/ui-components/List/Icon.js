@@ -6,7 +6,7 @@ export const Icon = ({ visible, checkmark, iconBackground }) => {
   if (visible) {
     return (
       <StyledIconView visible={visible} iconBackground={iconBackground}>
-        {checkmark && <StyledCheckIcon source={require('./images/check.png')} resizeMode='contain' />}
+        {checkmark && <StyledCheckIcon source={require('../../static/images/check.png')} resizeMode="contain" />}
       </StyledIconView>
     );
   }

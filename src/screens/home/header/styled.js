@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { View, Image, TouchableOpacity } from 'react-native';
-import { getPadding } from '../../utils';
+import { getPadding } from '../../../utils';
 
 export const StyledView = styled(View)`
   left: 0;

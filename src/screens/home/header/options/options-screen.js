@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, StatusBar, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { ListItem, Separator } from '../../../ui-components/list';
-import { connectAlert } from '../../../ui-components/alert';
+import { ListItem, Separator } from '../../../../ui-components/list';
+import { connectAlert } from '../../../common/alert';
 
-import { ICON_COLOR, ICON_SIZE } from '../../../theme';
+import { ICON_COLOR, ICON_SIZE } from '../../../../theme';
 
 const OptionsList = ({ navigation, alertWithType, handleLogout }) => {
   const handlePressThemes = () => navigation.navigate('Themes');

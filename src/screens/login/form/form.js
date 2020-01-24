@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { TextInput } from '../text-input';
-import { ContainedButton } from '../buttons';
+import { TextInput } from '../../../ui-components/text-input';
+import { ContainedButton } from '../../../ui-components/buttons';
 import { StyledContainer } from './styled';
 
 function useFormInput(initialValue) {

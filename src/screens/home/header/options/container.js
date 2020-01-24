@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { Options } from './options-screen';
-import { actions } from '../../../actions/auth';
+import { actions } from '../../../../actions/auth';
 
 const mapDispatchToProps = {
   handleLogout: actions.onLogOut,

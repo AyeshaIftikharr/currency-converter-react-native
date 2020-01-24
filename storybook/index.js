@@ -1,4 +1,3 @@
-// import { AppRegistry } from 'react-native';
 import { getStorybookUI, configure } from '@storybook/react-native';
 import { loadStories } from './storyLoader';
 
@@ -11,4 +10,4 @@ configure(() => {
 
 const StorybookUIRoot = getStorybookUI({ onDeviceUI: false });
 
-export default StorybookUIRoot;
+export const App = StorybookUIRoot;

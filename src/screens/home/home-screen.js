@@ -4,12 +4,12 @@ import { StatusBar, KeyboardAvoidingView } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import { MainLayout } from '../../ui-components/main-layout';
-import { Logo } from '../../ui-components/logo';
+import { MainLayout } from '../common/main-layout';
+import { Logo } from '../common/logo';
+import { Header } from './header';
 import { InputWithButton } from '../../ui-components/text-input';
 import { CustomButton } from '../../ui-components/buttons';
 import { LastConverted } from '../../ui-components/text';
-import { Header } from '../../ui-components/header';
 import { StyledButtonContainer } from './styled';
 
 import { WHITE, ICON_SIZE } from '../../theme';

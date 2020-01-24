@@ -6,7 +6,7 @@ import { store, persistor } from './store';
 import { Navigator } from './routes';
 import { ThemeProvider } from './theme';
 
-import { AlertProvider } from './ui-components/alert';
+import { AlertProvider } from './screens/common/alert';
 
 export const App = () => (
   <Provider store={store}>

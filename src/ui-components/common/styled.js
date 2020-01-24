@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { View, TouchableHighlight } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { INPUT_HEIGHT, BORDER_RADIUS } from '../../theme';
 
 export const StyledTouchableHighlight = styled(TouchableHighlight)`
@@ -11,6 +12,10 @@ export const StyledTouchableHighlight = styled(TouchableHighlight)`
   justify-content: center;
 `;
 
-export const StyledIcon = styled(View)`
+export const StyledIconView = styled(View)`
   padding: 10px;
+`;
+
+export const StyledIcon = styled(Icon)`
+  color: ${({ theme }) => theme.primaryColor};
 `;
