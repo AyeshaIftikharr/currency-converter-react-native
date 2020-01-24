@@ -1,12 +1,12 @@
 // import { AppRegistry } from 'react-native';
 import { getStorybookUI, configure } from '@storybook/react-native';
+import { loadStories } from './storyLoader';
 
 import './rn-addons';
 
 // import stories
 configure(() => {
-  require('./stories');
-  require('./stories/NewButton/NewButton.stories');
+  loadStories();
 }, module);
 
 const StorybookUIRoot = getStorybookUI({ onDeviceUI: false });
