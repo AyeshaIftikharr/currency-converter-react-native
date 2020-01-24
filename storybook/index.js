@@ -15,7 +15,7 @@ configure(() => {
 const StorybookUIRoot = getStorybookUI({ asyncStorage: null, onDeviceUI: false });
 
 export const App = () => (
-  <ThemeProvider theme={THEME_LOOKUP.ORANGE}>
+  <ThemeProvider theme={THEME_LOOKUP.BLUE}>
     <StorybookUIRoot />
   </ThemeProvider>
 );
