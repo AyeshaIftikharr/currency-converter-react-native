@@ -24,7 +24,7 @@ export const Form = ({ type, onSubmit }) => {
     <StyledContainer>
       <TextInput placeholder='Username' keyboardType='email-address' {...username} />
       <TextInput placeholder='Password' secureTextEntry {...password} />
-      <Button text={type} onPress={onSubmit} disabled={!isEnabled} />
+      <Button contained text={type} onPress={onSubmit} disabled={!isEnabled} />
     </StyledContainer>
   );
 };
