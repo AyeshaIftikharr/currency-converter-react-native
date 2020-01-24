@@ -1,8 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledView, StyledText, StyledTextInput, StyledSeparator } from './styled';
-import { StyledIcon, StyledIconView, StyledTouchableHighlight } from '../common';
+import {
+  StyledView,
+  StyledText,
+  StyledTextInput,
+  StyledSeparator,
+  StyledIcon,
+  StyledIconView,
+  StyledTouchableHighlight,
+} from './styled';
+
 import { UNDERLAY_COLOR, ICON_SIZE, INPUT_TEXT } from '../../theme';
 
 export const TextInput = ({
@@ -28,20 +36,20 @@ export const TextInput = ({
       <StyledTextInput
         pointerEvents={!editable ? 'none' : 'auto'}
         placeholderTextColor={INPUT_TEXT}
-        underlineColorAndroid="transparent"
+        underlineColorAndroid='transparent'
         {...props}
       />
       {onMarkAsFavorite && (
         <StyledTouchableHighlight onPress={onMarkAsFavorite} underlayColor={UNDERLAY_COLOR}>
           <StyledIconView>
-            <StyledIcon name="heart" size={ICON_SIZE} />
+            <StyledIcon name='heart' size={ICON_SIZE} />
           </StyledIconView>
         </StyledTouchableHighlight>
       )}
       {onRemove && (
         <StyledTouchableHighlight onPress={onRemove} underlayColor={UNDERLAY_COLOR}>
           <StyledIconView>
-            <StyledIcon name="trash" size={ICON_SIZE} />
+            <StyledIcon name='trash' size={ICON_SIZE} />
           </StyledIconView>
         </StyledTouchableHighlight>
       )}

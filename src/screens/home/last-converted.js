@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text } from './text';
+import { Text } from '../../ui-components/text';
 
 export const LastConverted = ({ date, base, quote, conversionRate }) => (
   <Text>{`1 ${base} = ${conversionRate} ${quote} as of ${date}`}</Text>

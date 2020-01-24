@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, StatusBar } from 'react-native';
-// components
+
 import { ListItem, Separator } from '../../../../../ui-components/list-item';
 import { THEME_TYPES } from '../../../../../constants';
 
@@ -13,9 +13,9 @@ export const Themes = ({ navigation, changeTheme }) => {
 
   return (
     <ScrollView>
-      <StatusBar translucent={false} barStyle="default" />
+      <StatusBar translucent={false} barStyle='default' />
       <ListItem
-        text="Blue"
+        text='Blue'
         onPress={() => handlePressTheme(THEME_TYPES.BLUE.enum)}
         selected
         checkmark={false}
@@ -23,7 +23,7 @@ export const Themes = ({ navigation, changeTheme }) => {
       />
       <Separator />
       <ListItem
-        text="Orange"
+        text='Orange'
         onPress={() => handlePressTheme(THEME_TYPES.ORANGE.enum)}
         selected
         checkmark={false}
@@ -31,7 +31,7 @@ export const Themes = ({ navigation, changeTheme }) => {
       />
       <Separator />
       <ListItem
-        text="Green"
+        text='Green'
         onPress={() => handlePressTheme(THEME_TYPES.GREEN.enum)}
         selected
         checkmark={false}
@@ -39,7 +39,7 @@ export const Themes = ({ navigation, changeTheme }) => {
       />
       <Separator />
       <ListItem
-        text="Purple"
+        text='Purple'
         onPress={() => handlePressTheme(THEME_TYPES.PURPLE.enum)}
         selected
         checkmark={false}

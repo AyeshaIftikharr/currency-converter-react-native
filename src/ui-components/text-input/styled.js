@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { View, Text, TextInput, TouchableHighlight } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-const INPUT_HEIGHT = 48;
-const BORDER_RADIUS = 4;
+import { INPUT_HEIGHT, BORDER_RADIUS } from '../../theme';
 
 export const StyledView = styled(View)`
   align-items: center;
@@ -36,4 +36,21 @@ export const StyledTextInput = styled(TextInput)`
   height: ${INPUT_HEIGHT}px;
   padding-left: 8px;
   padding-right: 8px;
+`;
+
+export const StyledTouchableHighlight = styled(TouchableHighlight)`
+  align-items: center;
+  background-color: ${({ theme }) => theme.white};
+  border-bottom-left-radius: ${BORDER_RADIUS}px;
+  border-top-left-radius: ${BORDER_RADIUS}px;
+  height: ${INPUT_HEIGHT}px;
+  justify-content: center;
+`;
+
+export const StyledIconView = styled(View)`
+  padding: 10px;
+`;
+
+export const StyledIcon = styled(Icon)`
+  color: ${({ theme }) => theme.primaryColor};
 `;

@@ -6,11 +6,6 @@ export const StyledView = styled(View)`
   flex-direction: row;
 `;
 
-export const StyledImage = styled(Image)`
-  margin-right: 11px;
-  width: 19px;
-`;
-
 export const StyledText = styled(Text)`
   color: ${({ theme }) => theme.white};
   font-size: 15px;

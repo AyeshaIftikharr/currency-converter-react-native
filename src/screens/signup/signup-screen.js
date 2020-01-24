@@ -17,11 +17,11 @@ export const Signup = ({ handleSignup, navigation: { navigate } }) => {
 
   return (
     <MainLayout>
-      <StatusBar translucent={false} barStyle="light-content" />
+      <StatusBar translucent={false} barStyle='light-content' />
       <Logo />
-      <KeyboardAvoidingView behavior="padding">
-        <Form type="Signup" onSubmit={gotoHomeDirectory} />
-        <RedirectPrompt text="Already have an account?" onPress={() => navigate('Login')} buttonText="Login" />
+      <KeyboardAvoidingView behavior='padding'>
+        <Form type='Signup' onSubmit={gotoHomeDirectory} />
+        <RedirectPrompt text='Already have an account?' onPress={() => navigate('Login')} buttonText='Login' />
       </KeyboardAvoidingView>
     </MainLayout>
   );

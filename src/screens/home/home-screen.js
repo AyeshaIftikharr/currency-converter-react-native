@@ -7,9 +7,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { MainLayout } from '../common/main-layout';
 import { Logo } from '../common/logo';
 import { Header } from './header';
-import { InputWithButton } from '../../ui-components/text-input';
-import { CustomButton } from '../../ui-components/button';
-import { LastConverted } from '../../ui-components/text';
+import { TextInput } from '../../ui-components/text-input';
+import { Button } from '../../ui-components/button';
+import { LastConverted } from './last-converted';
 import { StyledButtonContainer } from './styled';
 
 import { WHITE, ICON_SIZE } from '../../theme';
@@ -59,20 +59,20 @@ export const Home = ({
 
   return (
     <MainLayout>
-      <StatusBar translucent={false} barStyle="light-content" />
+      <StatusBar translucent={false} barStyle='light-content' />
       <Header onPress={handleOptionsPress} />
-      <KeyboardAvoidingView behavior="padding">
+      <KeyboardAvoidingView behavior='padding'>
         <Logo />
-        <InputWithButton
+        <TextInput
           buttonText={baseCurrency}
           onPress={handlePressBaseCurrency}
           value={amount.toString()}
-          keyboardType="numeric"
+          keyboardType='numeric'
           onChangeText={text => setAmount(text)}
         />
         {quoteCurrencies.map(quoteCurrency => (
           <React.Fragment key={quoteCurrency}>
-            <InputWithButton
+            <TextInput
               buttonText={quoteCurrency}
               editable={false}
               value={isFetching ? '...' : (amount * rates[quoteCurrency]).toFixed(2)}
@@ -95,11 +95,11 @@ export const Home = ({
           </React.Fragment>
         ))}
         <StyledButtonContainer>
-          <CustomButton text="Add Currency" onPress={onAddQuoteCurrency} />
-          <CustomButton
-            text="View Favorites"
+          <Button text='Add Currency' onPress={onAddQuoteCurrency} />
+          <Button
+            text='View Favorites'
             onPress={onViewFavoriteCurrencies}
-            icon={<Icon name="heart" size={ICON_SIZE} color={WHITE} />}
+            icon={<Icon name='heart' size={ICON_SIZE} color={WHITE} />}
           />
         </StyledButtonContainer>
       </KeyboardAvoidingView>

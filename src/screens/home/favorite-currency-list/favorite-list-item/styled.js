@@ -1,7 +1,21 @@
 import styled from 'styled-components';
-import { View, TouchableHighlight } from 'react-native';
+import { View, TouchableHighlight, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { INPUT_HEIGHT, BORDER_RADIUS } from '../../theme';
+
+import { INPUT_HEIGHT, BORDER_RADIUS } from '../../../../theme';
+
+export const StyledView = styled(View)`
+  align-items: center;
+  background-color: ${({ theme }) => theme.white};
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 20px 16px 20px;
+`;
+
+export const StyledText = styled(Text)`
+  color: ${({ theme }) => theme.darkText};
+  font-size: 16px;
+`;
 
 export const StyledTouchableHighlight = styled(TouchableHighlight)`
   align-items: center;
