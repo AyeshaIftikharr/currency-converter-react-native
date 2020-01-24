@@ -8,7 +8,7 @@ import { MainLayout } from '../common/main-layout';
 import { Logo } from '../common/logo';
 import { Header } from './header';
 import { InputWithButton } from '../../ui-components/text-input';
-import { CustomButton } from '../../ui-components/buttons';
+import { CustomButton } from '../../ui-components/button';
 import { LastConverted } from '../../ui-components/text';
 import { StyledButtonContainer } from './styled';
 
@@ -17,6 +17,7 @@ import { WHITE, ICON_SIZE } from '../../theme';
 export const Home = ({
   navigation: { navigate },
   isFetching,
+
   baseCurrency,
   getInitialConversion,
   quoteCurrencies,

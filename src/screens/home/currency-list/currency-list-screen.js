@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FlatList, StatusBar } from 'react-native';
 // components
-import { ListItem, Separator } from '../../../ui-components/list';
+import { ListItem, Separator } from '../../../ui-components/list-item';
 import { CURRENCIES } from '../../../static/data/currency-list';
 // styles
 import { StyledView } from './styled';
@@ -20,7 +20,7 @@ export const CurrencyList = ({ navigation, baseCurrency, changeBaseCurrency, onA
 
   return (
     <StyledView>
-      <StatusBar translucent={false} barStyle='light-content' />
+      <StatusBar translucent={false} barStyle="light-content" />
       <FlatList
         data={CURRENCIES}
         renderItem={({ item }) => (

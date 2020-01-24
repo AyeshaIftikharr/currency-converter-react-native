@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { TextInput } from '../../../ui-components/text-input';
-import { ContainedButton } from '../../../ui-components/buttons';
+import { ContainedButton } from '../../../ui-components/button';
 import { StyledContainer } from './styled';
 
 function useFormInput(initialValue) {
@@ -22,8 +22,8 @@ export const Form = ({ type, onSubmit }) => {
   const isEnabled = username.value && password.value;
   return (
     <StyledContainer>
-      <TextInput placeholder='Username' keyboardType='email-address' {...username} />
-      <TextInput placeholder='Password' secureTextEntry {...password} />
+      <TextInput placeholder="Username" keyboardType="email-address" {...username} />
+      <TextInput placeholder="Password" secureTextEntry {...password} />
       <ContainedButton text={type} onPress={onSubmit} disabled={!isEnabled} />
     </StyledContainer>
   );

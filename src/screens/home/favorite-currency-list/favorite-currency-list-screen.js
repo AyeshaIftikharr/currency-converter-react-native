@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FlatList, StatusBar } from 'react-native';
 
-import { FavoriteListItem, Separator } from '../../../ui-components/list';
+import { FavoriteListItem, Separator } from '../../../ui-components/list-item';
 import { StyledView } from './styled';
 
 export const FavoriteCurrencyList = ({ favoriteCurrencyList, onUnMarkCurrencyFromFavorites }) => (
   <StyledView>
-    <StatusBar translucent={false} barStyle='light-content' />
+    <StatusBar translucent={false} barStyle="light-content" />
     <FlatList
       data={favoriteCurrencyList}
       renderItem={({ item }) => <FavoriteListItem item={item} onPress={() => onUnMarkCurrencyFromFavorites(item)} />}
