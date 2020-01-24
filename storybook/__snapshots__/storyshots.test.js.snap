@@ -1,0 +1,688 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button/Contained default 1`] = `
+<View
+  className="sc-AykKG ktOogV"
+  dark={true}
+>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      className="sc-AykKC bjkwYS"
+    >
+      <Text
+        className="sc-AykKE gddQvN"
+      >
+        Contained
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Button/Contained default disabled 1`] = `
+<View
+  className="sc-AykKG ktOogV"
+  dark={true}
+>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      className="sc-AykKC bjkwYS"
+    >
+      <Text
+        className="sc-AykKE gddQvN"
+      >
+        Disabled
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Button/Text default 1`] = `
+<View
+  className="sc-AykKG ktOogV"
+  dark={true}
+>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      className="sc-AykKC bjkwYS"
+    >
+      <Text
+        className="sc-AykKE gddQvN"
+      >
+        Text
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Button/Text with icon 1`] = `
+<View
+  className="sc-AykKG ktOogV"
+  dark={true}
+>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      className="sc-AykKC bjkwYS"
+    >
+      <Text
+        className="sc-AykKE gddQvN"
+      >
+        Text with Icon
+      </Text>
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 20,
+            },
+            undefined,
+            Object {
+              "fontFamily": "FontAwesome",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots ListItem clickable list item 1`] = `
+<View
+  className="sc-fzXfLS eNfACU"
+>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={null}
+  >
+    <View
+      className="sc-AykKH cDvYUp"
+      style={null}
+    >
+      <Text
+        className="sc-AykKI cdvNRU"
+      >
+        List Item
+      </Text>
+      <View
+        className="sc-AykKK hlEDXN"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots ListItem default 1`] = `
+<View
+  className="sc-fzXfLS eNfACU"
+>
+  <View
+    className="sc-AykKH cDvYUp"
+  >
+    <Text
+      className="sc-AykKI cdvNRU"
+    >
+      List Item
+    </Text>
+    <View
+      className="sc-AykKK hlEDXN"
+    />
+  </View>
+</View>
+`;
+
+exports[`Storyshots ListItem with custom icon 1`] = `
+<View
+  className="sc-fzXfLS eNfACU"
+>
+  <View
+    className="sc-AykKH cDvYUp"
+  >
+    <Text
+      className="sc-AykKI cdvNRU"
+    >
+      List Item
+    </Text>
+    <View
+      className="sc-AykKK hlEDXN"
+    />
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#4F6D7A",
+            "fontSize": 25,
+          },
+          undefined,
+          Object {
+            "fontFamily": "FontAwesome",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Storyshots ListItem with selected icon 1`] = `
+<View
+  className="sc-fzXfLS eNfACU"
+>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={null}
+  >
+    <View
+      className="sc-AykKH cDvYUp"
+      style={null}
+    >
+      <Text
+        className="sc-AykKI cdvNRU"
+      >
+        List Item
+      </Text>
+      <View
+        className="sc-AykKK jzMBIH"
+        visible={true}
+      >
+        <Image
+          className="sc-fzXfLO eLUyHO"
+          resizeMode="contain"
+          source={
+            Object {
+              "testUri": "../../../src/static/images/check.png",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Text default 1`] = `
+<View
+  className="sc-AykKG ktOogV"
+  dark={true}
+>
+  <Text
+    className="sc-fzXfLX iqoHEw"
+    dark={false}
+  >
+    Default Text
+  </Text>
+</View>
+`;
+
+exports[`Storyshots Text default dark 1`] = `
+<View
+  className="sc-AykKG ktOogV"
+>
+  <Text
+    className="sc-fzXfLX iqoHEw"
+    dark={true}
+  >
+    Text on a light background
+  </Text>
+</View>
+`;
+
+exports[`Storyshots TextInput default 1`] = `
+<View
+  className="sc-AykKG ktOogV"
+  dark={true}
+>
+  <View
+    className="sc-fzXfLT gybldk"
+    editable={true}
+  >
+    <TextInput
+      allowFontScaling={true}
+      className="sc-fzXfLW ihNgGL"
+      onChaneText={[Function]}
+      placeholder="Input"
+      placeholderTextColor="#797979"
+      pointerEvents="auto"
+      rejectResponderTermination={true}
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`Storyshots TextInput with button 1`] = `
+<View
+  className="sc-AykKG ktOogV"
+  dark={true}
+>
+  <View
+    className="sc-fzXfLT gybldk"
+    editable={true}
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
+      <Text
+        className="sc-fzXfLU hTubob"
+        style={null}
+      >
+        Button
+      </Text>
+    </View>
+    <View
+      className="sc-fzXfLV fgyNku"
+    />
+    <TextInput
+      allowFontScaling={true}
+      className="sc-fzXfLW ihNgGL"
+      onChaneText={[Function]}
+      placeholderTextColor="#797979"
+      pointerEvents="auto"
+      rejectResponderTermination={true}
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`Storyshots TextInput with button and input disabled 1`] = `
+<View
+  className="sc-AykKG ktOogV"
+  dark={true}
+>
+  <View
+    className="sc-fzXfLT gybldk"
+    editable={false}
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
+      <Text
+        className="sc-fzXfLU hTubob"
+        style={null}
+      >
+        Button
+      </Text>
+    </View>
+    <View
+      className="sc-fzXfLV fgyNku"
+    />
+    <TextInput
+      allowFontScaling={true}
+      className="sc-fzXfLW ihNgGL"
+      onChaneText={[Function]}
+      placeholderTextColor="#797979"
+      pointerEvents="none"
+      rejectResponderTermination={true}
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`Storyshots TextInput with icon buttons 1`] = `
+<View
+  className="sc-AykKG ktOogV"
+  dark={true}
+>
+  <View
+    className="sc-fzXfLT gybldk"
+    editable={true}
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
+      <Text
+        className="sc-fzXfLU hTubob"
+        style={null}
+      >
+        Button
+      </Text>
+    </View>
+    <View
+      className="sc-fzXfLV fgyNku"
+    />
+    <TextInput
+      allowFontScaling={true}
+      className="sc-fzXfLW ihNgGL"
+      onChaneText={[Function]}
+      placeholderTextColor="#797979"
+      pointerEvents="auto"
+      rejectResponderTermination={true}
+      underlineColorAndroid="transparent"
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
+      <View
+        className="sc-fzXfLQ jztBSn"
+        style={null}
+      >
+        <Text
+          allowFontScaling={false}
+          className="sc-fzXfLR cIyihe"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 20,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
+      <View
+        className="sc-fzXfLQ jztBSn"
+        style={null}
+      >
+        <Text
+          allowFontScaling={false}
+          className="sc-fzXfLR cIyihe"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 20,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots TextInput with icon buttons and disabled input 1`] = `
+<View
+  className="sc-AykKG ktOogV"
+  dark={true}
+>
+  <View
+    className="sc-fzXfLT gybldk"
+    editable={false}
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
+      <Text
+        className="sc-fzXfLU hTubob"
+        style={null}
+      >
+        Button
+      </Text>
+    </View>
+    <View
+      className="sc-fzXfLV fgyNku"
+    />
+    <TextInput
+      allowFontScaling={true}
+      className="sc-fzXfLW ihNgGL"
+      onChaneText={[Function]}
+      placeholderTextColor="#797979"
+      pointerEvents="none"
+      rejectResponderTermination={true}
+      underlineColorAndroid="transparent"
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
+      <View
+        className="sc-fzXfLQ jztBSn"
+        style={null}
+      >
+        <Text
+          allowFontScaling={false}
+          className="sc-fzXfLR cIyihe"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 20,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
+      <View
+        className="sc-fzXfLQ jztBSn"
+        style={null}
+      >
+        <Text
+          allowFontScaling={false}
+          className="sc-fzXfLR cIyihe"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 20,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

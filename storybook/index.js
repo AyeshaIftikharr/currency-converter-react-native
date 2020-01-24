@@ -12,7 +12,7 @@ configure(() => {
   loadStories();
 }, module);
 
-const StorybookUIRoot = getStorybookUI({ onDeviceUI: false });
+const StorybookUIRoot = getStorybookUI({ asyncStorage: null, onDeviceUI: false });
 
 export const App = () => (
   <ThemeProvider theme={THEME_LOOKUP.BLUE}>
