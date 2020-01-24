@@ -8,7 +8,7 @@ import { CenterView } from '../../decorators/center-view';
 
 storiesOf('TextInput', module)
   .addDecorator(getStory => <CenterView dark>{getStory()}</CenterView>)
-  .add('default', () => <TextInput placeholder="Input" onChaneText={() => action('onChangeText')()} />)
+  .add('default', () => <TextInput placeholder='Input' onChaneText={() => action('onChangeText')()} />)
   .add('with button', () => (
     <TextInput
       withButton

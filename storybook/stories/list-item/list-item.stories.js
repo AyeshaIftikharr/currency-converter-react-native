@@ -14,7 +14,7 @@ storiesOf('ListItem', module)
   .add('default', () => <ListItem text='List Item' />)
   .add('clickable list item', () => <ListItem text='List Item' onPress={() => action('clicked-default-text')()} />)
   .add('with selected icon', () => (
-    <ListItem selected checkmark visible text="List Item" onPress={() => action('clicked-default-text')()} />
+    <ListItem selected checkmark visible text='List Item' onPress={() => action('clicked-default-text')()} />
   ))
   .add('with custom icon', () => (
     <ListItem text='List Item' customIcon={<Icon name='heart-o' size={ICON_SIZE + 5} color={BLUE} />} />
