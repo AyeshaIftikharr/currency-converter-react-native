@@ -5,7 +5,7 @@ import { StyledView, StyledTouchableOpacity, StyledText, StyledImage } from './s
 export const ClearButton = ({ text, onPress }) => (
   <StyledTouchableOpacity onPress={onPress}>
     <StyledView>
-      <StyledImage resizeMode='contain' source={require('./images/icon.png')} />
+      <StyledImage resizeMode="contain" source={require('./images/icon.png')} />
       <StyledText>{text}</StyledText>
     </StyledView>
   </StyledTouchableOpacity>
