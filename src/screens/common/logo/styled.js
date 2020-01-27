@@ -21,6 +21,7 @@ export const StyledImage = styled(Image)`
 
 export const StyledText = styled(Text)`
   color: ${({ theme }) => theme.white};
+  font-family: ${({ theme }) => theme.fontFamily};
   font-size: 28px;
   font-weight: 600;
   letter-spacing: -0.5px;
