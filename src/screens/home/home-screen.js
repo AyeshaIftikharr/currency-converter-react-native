@@ -4,12 +4,12 @@ import { StatusBar, KeyboardAvoidingView } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import { MainLayout } from '../../ui-components/main-layout';
-import { Logo } from '../../ui-components/logo';
-import { InputWithButton } from '../../ui-components/text-input';
-import { CustomButton } from '../../ui-components/buttons';
-import { LastConverted } from '../../ui-components/text';
-import { Header } from '../../ui-components/header';
+import { MainLayout } from '../common/main-layout';
+import { Logo } from '../common/logo';
+import { Header } from './header';
+import { TextInput } from '../../ui-components/text-input';
+import { Text } from '../../ui-components/text';
+import { Button } from '../../ui-components/button';
 import { StyledButtonContainer } from './styled';
 
 import { WHITE, ICON_SIZE } from '../../theme';
@@ -17,6 +17,7 @@ import { WHITE, ICON_SIZE } from '../../theme';
 export const Home = ({
   navigation: { navigate },
   isFetching,
+
   baseCurrency,
   getInitialConversion,
   quoteCurrencies,
@@ -62,40 +63,40 @@ export const Home = ({
       <Header onPress={handleOptionsPress} />
       <KeyboardAvoidingView behavior='padding'>
         <Logo />
-        <InputWithButton
+        <TextInput
+          withButton
           buttonText={baseCurrency}
           onPress={handlePressBaseCurrency}
           value={amount.toString()}
           keyboardType='numeric'
           onChangeText={text => setAmount(text)}
         />
-        {quoteCurrencies.map(quoteCurrency => (
-          <React.Fragment key={quoteCurrency}>
-            <InputWithButton
-              buttonText={quoteCurrency}
-              editable={false}
-              value={isFetching ? '...' : (amount * rates[quoteCurrency]).toFixed(2)}
-              onRemove={() => onRemoveQuoteCurrency(quoteCurrency)}
-              onMarkAsFavorite={() =>
-                onMarkCurrencyAsFavorite({
-                  baseCurrency,
-                  quoteCurrency,
-                  lastConvertedDate,
-                  conversionRate: rates[quoteCurrency],
-                })
-              }
-            />
-            <LastConverted
-              date={lastConvertedDate}
-              base={baseCurrency}
-              quote={quoteCurrency}
-              conversionRate={rates[quoteCurrency]}
-            />
-          </React.Fragment>
-        ))}
+        {quoteCurrencies.map(quoteCurrency => {
+          const conversionRate = rates[quoteCurrency];
+          return (
+            <React.Fragment key={quoteCurrency}>
+              <TextInput
+                withButton
+                buttonText={quoteCurrency}
+                editable={false}
+                value={isFetching ? '...' : (amount * conversionRate).toFixed(2)}
+                onRemove={() => onRemoveQuoteCurrency(quoteCurrency)}
+                onMarkAsFavorite={() =>
+                  onMarkCurrencyAsFavorite({
+                    baseCurrency,
+                    quoteCurrency,
+                    lastConvertedDate,
+                    conversionRate,
+                  })
+                }
+              />
+              <Text text={`1 ${baseCurrency} = ${conversionRate} ${quoteCurrency} as of ${lastConvertedDate}`} />
+            </React.Fragment>
+          );
+        })}
         <StyledButtonContainer>
-          <CustomButton text='Add Currency' onPress={onAddQuoteCurrency} />
-          <CustomButton
+          <Button text='Add Currency' onPress={onAddQuoteCurrency} />
+          <Button
             text='View Favorites'
             onPress={onViewFavoriteCurrencies}
             icon={<Icon name='heart' size={ICON_SIZE} color={WHITE} />}

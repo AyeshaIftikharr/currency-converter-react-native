@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StatusBar, KeyboardAvoidingView } from 'react-native';
 
-import { Form } from '../../ui-components/form';
-import { MainLayout } from '../../ui-components/main-layout';
-import { Logo } from '../../ui-components/logo';
-import { Footer } from '../../ui-components/footer';
+import { Form } from '../login/form';
+import { MainLayout } from '../common/main-layout';
+import { Logo } from '../common/logo';
+import { RedirectPrompt } from '../login/redirect-prompt';
 
 export const Signup = ({ handleSignup, navigation: { navigate } }) => {
   const gotoHomeDirectory = () => {
@@ -21,8 +21,8 @@ export const Signup = ({ handleSignup, navigation: { navigate } }) => {
       <Logo />
       <KeyboardAvoidingView behavior='padding'>
         <Form type='Signup' onSubmit={gotoHomeDirectory} />
+        <RedirectPrompt text='Already have an account?' onPress={() => navigate('Login')} buttonText='Login' />
       </KeyboardAvoidingView>
-      <Footer text='Already have an account?' onPress={() => navigate('Login')} buttonText='Login' />
     </MainLayout>
   );
 };
