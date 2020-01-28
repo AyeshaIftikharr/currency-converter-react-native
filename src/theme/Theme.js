@@ -6,6 +6,7 @@ const THEME = {
   inputText: colors.INPUT_TEXT,
   lightGrey: colors.LIGHT_GREY,
   darkText: colors.DARK_TEXT,
+  fontFamily: 'Lato',
 };
 
 export const ICON_SIZE = 20;
