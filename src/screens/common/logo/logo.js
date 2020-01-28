@@ -58,10 +58,10 @@ export const Logo = () => {
   return (
     <StyledView>
       <StyledContainer style={{ width: containerImageWidth, height: containerImageWidth }}>
-        <StyledImageBackground resizeMode="contain" source={require('../../../static/images/background.png')}>
+        <StyledImageBackground resizeMode='contain' source={require('../../../static/images/background.png')}>
           <StyledImage
             style={{ width: imageWidth }}
-            resizeMode="contain"
+            resizeMode='contain'
             source={require('../../../static/images/logo.png')}
           />
         </StyledImageBackground>
