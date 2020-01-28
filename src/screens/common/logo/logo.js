@@ -17,9 +17,6 @@ export const Logo = () => {
   const [containerImageWidth] = useState(new Animated.Value(LARGE_CONTAINER_SIZE));
   const [imageWidth] = useState(new Animated.Value(LARGE_IMAGE_SIZE));
 
-  console.log('containerImageWidth', containerImageWidth);
-  console.log('imageWidth', imageWidth);
-
   const onShowKeyboard = () => {
     Animated.parallel([
       Animated.timing(containerImageWidth, {
@@ -61,10 +58,10 @@ export const Logo = () => {
   return (
     <StyledView>
       <StyledContainer style={{ width: containerImageWidth, height: containerImageWidth }}>
-        <StyledImageBackground resizeMode='contain' source={require('../../../static/images/background.png')}>
+        <StyledImageBackground resizeMode="contain" source={require('../../../static/images/background.png')}>
           <StyledImage
             style={{ width: imageWidth }}
-            resizeMode='contain'
+            resizeMode="contain"
             source={require('../../../static/images/logo.png')}
           />
         </StyledImageBackground>
