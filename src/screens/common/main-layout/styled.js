@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { View } from 'react-native';
+import { SafeAreaView } from 'react-native';
 
-export const StyledView = styled(View)`
+export const StyledSafeAreaView = styled(SafeAreaView)`
   align-items: center;
   background-color: ${({ theme }) => theme.primaryColor};
   flex: 1;

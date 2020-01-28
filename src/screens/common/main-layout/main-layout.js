@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { TouchableWithoutFeedback, Keyboard } from 'react-native';
-import { StyledView } from './styled';
+import { StyledSafeAreaView } from './styled';
 
 export const MainLayout = ({ children }) => {
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-      <StyledView>{children}</StyledView>
+      <StyledSafeAreaView>{children}</StyledSafeAreaView>
     </TouchableWithoutFeedback>
   );
 };
