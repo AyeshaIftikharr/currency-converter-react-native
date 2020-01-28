@@ -1,22 +1,35 @@
 import styled from 'styled-components';
-import { View, Text, ImageBackground, Image, Dimensions } from 'react-native';
+import { View, Text, ImageBackground, Dimensions, Animated } from 'react-native';
 
 const imageWidth = Dimensions.get('window').width / 2;
+
+export const LARGE_CONTAINER_SIZE = imageWidth;
+export const LARGE_IMAGE_SIZE = imageWidth / 2;
+export const SMALL_CONTAINER_SIZE = imageWidth / 2;
+export const SMALL_IMAGE_SIZE = imageWidth / 4;
+export const ANIMATION_DURATION = 250;
 
 export const StyledView = styled(View)`
   align-items: center;
 `;
 
-export const StyledImageBackground = styled(ImageBackground)`
+export const StyledContainer = styled(Animated.View)`
   align-items: center;
-  height: ${imageWidth}px;
+  height: ${({ height }) => height}px;
   justify-content: center;
-  width: ${imageWidth}px;
+  width: ${({ width }) => width}px;
 `;
 
-export const StyledImage = styled(Image)`
+export const StyledImageBackground = styled(ImageBackground)`
+  align-items: center;
+  align-self: stretch;
+  flex: 1;
+  justify-content: center;
+`;
+
+export const StyledImage = styled(Animated.Image)`
   tint-color: ${({ theme }) => theme.primaryColor};
-  width: ${imageWidth / 2}px;
+  width: ${({ width }) => width}px;
 `;
 
 export const StyledText = styled(Text)`
