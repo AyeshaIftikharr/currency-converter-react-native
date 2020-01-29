@@ -67,9 +67,6 @@ const AppStack = createStackNavigator(
   {
     mode: 'modal',
     headerMode: 'none',
-    defaultNavigationOptions: {
-      cardStyle: { paddingTop: StatusBar.currentHeight },
-    },
   },
 );
 
