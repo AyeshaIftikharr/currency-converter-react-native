@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
 
-import { ListItem, Separator } from '../../../src/ui-components/list-item';
+import { ListItem } from '../../../src/ui-components/list-item';
 import { BufferView } from '../../decorators/buffer-view';
 
 import { BLUE, ICON_SIZE } from '../../../src/theme';
