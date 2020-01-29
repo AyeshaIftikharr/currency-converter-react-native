@@ -1,9 +1,10 @@
 import React from 'react';
 import { getStorybookUI, configure } from '@storybook/react-native';
-import { ThemeProvider } from 'styled-components';
 import { loadStories } from './storyLoader';
 
-import { THEME_LOOKUP } from '../src/theme';
+import { Provider } from 'react-redux';
+import { store } from '../src/store';
+import { ThemeProvider } from '../src/theme';
 
 import './rn-addons';
 
@@ -15,7 +16,9 @@ configure(() => {
 const StorybookUIRoot = getStorybookUI({ asyncStorage: null, onDeviceUI: false });
 
 export const App = () => (
-  <ThemeProvider theme={THEME_LOOKUP.BLUE}>
-    <StorybookUIRoot />
-  </ThemeProvider>
+  <Provider store={store}>
+    <ThemeProvider>
+      <StorybookUIRoot />
+    </ThemeProvider>
+  </Provider>
 );

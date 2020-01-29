@@ -8,16 +8,19 @@ function loadStories() {
 	require('./stories/list-item/list-item.stories');
 	require('./stories/text-input/text-input.stories');
 	require('./stories/text/text.stories');
+	require('./stories/theme/theme.stories');
 }
 
 const stories = [
 	'./stories/button/button.stories',
 	'./stories/list-item/list-item.stories',
 	'./stories/text-input/text-input.stories',
-	'./stories/text/text.stories'
+	'./stories/text/text.stories',
+	'./stories/theme/theme.stories',
+	,
 ];
 
 module.exports = {
-  loadStories,
-  stories,
+	loadStories,
+	stories,
 };
